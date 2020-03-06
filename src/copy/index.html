@@ -18,7 +18,7 @@
 	
 	<section class="booking-form">
 		<form id="form">
-			<!-- <div class="form-section form-area" id="travel-inquiry-form">
+		<!-- 	<div class="form-section form-area" id="travel-inquiry-form">
 				<div class="form-section-header active-section">
 					<h2>Contact Details</h2>
 					<input type="hidden" value="Travel Inquiry Form">
@@ -57,50 +57,45 @@
 
 				<div class="form-section-container">
 					<div class="form-section-tabs">
-						<!-- <ul class="tab-choises" id="nav-tab">
+						<ul class="tab-choises" id="nav-tab">
 							<li class="tab-icon icon-rail active"><a href="#tab-content-rail"></a><span>Rail</span></li>
 							<li class="tab-icon icon-bus"><a href="#tab-content-bus"></a><span>Bus</span></li>
-							<li class="tab-icon icon-visa"><a href="#tab-content-visas"></a><span>Visa</span></li>
+							<!-- <li class="tab-icon icon-visa"><a href="#tab-content-visas"></a><span>Visa</span></li> -->
 							<li class="tab-icon icon-insurance"><a href="#tab-content-insurance"></a><span>Travel Insurance</span></li>
-						</ul> -->
+						</ul>
 						<div class="tab-content">
 							<div class="tab-pane form-area active" id="tab-content-rail">
 								<!-- <h3>Event Details</h3> -->
 								<input type="hidden" value="Event Details">
 
-
-								<div class="input-container-checkbox">
-									<input type="checkbox" id="isFlexibleWithDates" name="isFlexibleWithDates" data-name="Flexible with Dates" value="No">
-								</div>
-
 								<h3>Select Event Type:</h3>
 								<div class="travel__policy__buttons">
 
 								    <div class="policy__button">
-								        <input type="radio" id="_RateTravelPolicy_None" name="_RateTravelPolicy" value="None" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_None">Private Party</label>
+								        <input type="radio" id="_Private_Party" name="_RateTravelPolicy" value="None" data-error="#_RateTravelPolicy_Err">
+								        <label for="_Private_Party">Private Party</label>
 								    </div>
 								    <div class="policy__button">
 
-								        <input type="radio" id="_RateTravelPolicy_Moderate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_Moderate">Corporate</label>
+								        <input type="radio" id="_Corporate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
+								        <label for="_Corporate">Corporate</label>
 								    </div>
 								    <div class="policy__button">
-								        <input type="radio" id="_RateTravelPolicy_Strict" name="_RateTravelPolicy" value="Controlled" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_Strict">Wedding</label>
+								        <input type="radio" id="_Wedding" name="_RateTravelPolicy" value="Controlled" data-error="#_RateTravelPolicy_Err">
+								        <label for="_Wedding">Wedding</label>
 								    </div>
 								</div>
 								
-								<h3>How Long is the Event?</h3>
+								<h3>How many hours should the DJ play music?</h3>
 
 								<div class="form-input-row-input input-air-travel">
 								    <div class="input-air-travel-label">
-								        <label for="_PerentageAirTravel">
-								                <div>3 hours</div><div>8 hours</div>
+								        <label for="_Hours">
+								                <div id="_Hours_Value"></div>
 								        </label>
 								    </div>
 								    <div class="slidecontainer">
-								        <input type="range" min="1" max="100" value="50" class="range-slider" id="_PerentageAirTravel" name="_PerentageAirTravel">
+								        <input type="range" min="2" max="8" value="5" class="range-slider" id="_Hours" name="_Hours">
 								    </div>
 								</div>
 
@@ -108,12 +103,12 @@
 	
 								<div class="form-input-row-input input-air-travel">
 								    <div class="input-air-travel-label">
-								        <label for="_PerentageAirTravel">
-								                <div>25 people</div><div>500+</div>
+								        <label for="_Attenance">
+								                <div id="_Attenance_Value"></div>
 								        </label>
 								    </div>
 								    <div class="slidecontainer">
-								        <input type="range" min="1" max="100" value="50" class="range-slider" id="_PerentageAirTravel" name="_PerentageAirTravel">
+								        <input type="range" min="25" max="500" value="100" class="range-slider" id="_Attenance" name="_Attenance">
 								    </div>
 								</div>
 
@@ -121,13 +116,13 @@
 
 								<div class="travel__policy__buttons">
 								    <div class="policy__button">
-								        <input type="radio" id="_RateTravelPolicy_None" name="_RateTravelPolicy" value="None" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_None">Yes, I need a sound system</label>
+								        <input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes, please!" data-error="#_RateTravelPolicy_Err">
+								        <label for="_SoundSystemYes">Yes, please!</label>
 								    </div>
 								    <div class="policy__button">
 
-								        <input type="radio" id="_RateTravelPolicy_Moderate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_Moderate">No, I have have a sound system</label>
+								        <input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-error="#_RateTravelPolicy_Err">
+								        <label for="_SoundSystemNo">No, I have a sound system.</label>
 								    </div>
 								</div>
 
@@ -141,94 +136,10 @@
 								    <div class="policy__button">
 
 								        <input type="radio" id="_RateTravelPolicy_Moderate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_Moderate">No, I dont need lighting</label>
+								        <label for="_RateTravelPolicy_Moderate">No, I don't need lighting</label>
 								    </div>
 								</div>
 
-								<!-- <div class="input-container">
-									<label for="dateOfTravel" class="required">Date of Travel</label>
-									<input type="date" name="dateOfTravel" data-name="Date of Travel">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container-checkbox">
-									<input type="checkbox" id="isFlexibleWithDates" name="isFlexibleWithDates" data-name="Flexible with Dates" value="No">
-									<label for="isFlexibleWithDates">Flexible with Dates</label>
-								</div>
-
-								<div class="input-container">
-									<label for="timeOfTravel" class="required">Time of Travel</label>
-									<input type="time" name="timeOfTravel" data-name="Time of Travel">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="departureLocation" class="required">Departure Location</label>
-									<input type="text" name="departureLocation" data-name="Departure Location">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="arrivalLocation" class="required">Arrival Location</label>
-									<input type="text" name="arrivalLocation" data-name="Arrival Location">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="boardingPoint">Boarding Point (if required)</label>
-									<input type="text" name="boardingPoint" data-name="Boarding Point (if required)">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="typeOfReservationRequired" class="required">Type of Reservation Required</label>
-									<select name="typeOfReservationRequired" data-name="Type of Reservation Required" id="typeOfReso">
-										<option value="One Way">One Way</option>
-										<option value="Round Trip">Round Trip</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container input-return-trip">
-									<label for="returnDateOfTravel" class="required">Return Date of Travel</label>
-									<input type="date" name="returnDateOfTravel" data-name="Return Date of Travel">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container-checkbox input-return-trip">
-									<input type="checkbox" id="isFlexibleWithReturnDates" name="isFlexibleWithReturnDates" data-name="Flexible with Return Dates" value="No">
-									<label for="isFlexibleWithReturnDates">Flexible with Return Dates</label>
-								</div>
-
-								<div class="input-container input-return-trip">
-									<label for="returntimeOfTravel" class="required">Return Time of Travel</label>
-									<input type="time" name="returntimeOfTravel" data-name="Return Time of Travel">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="classOfTravel" class="required">Class of Travel</label>
-									<select name="classOfTravel" data-name="Class of Travel">
-										<option value="Economy Class">Economy Class</option>
-										<option value="Business Class">Business Class</option>
-										<option value="First Class">First Class</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="statusToBeBooked">Status to be Booked</label>
-									<select name="statusToBeBooked" data-name="Status to be Booked">
-										<option value="Value">Value</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="otherComments">Other Comments</label>
-									<input type="text" name="otherComments" data-name="Comments">
-									<div class="icon-validation"></div>
-								</div> -->
 
 								<button class="next-tab">Next</button>
 
@@ -391,58 +302,6 @@
 	</form>
 </section>
 
-
-<!-- <footer>
-	<div class="footer-box">
-		<div class="footer-nav">
-			<ul>
-				<li><a href="#"><strong>Link</strong></a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<ul>
-				<li><a href="#"><strong>Link</strong></a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<ul>
-				<li><a href="#"><strong>Link</strong></a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<ul>
-				<li><a href="#"><strong>Link</strong></a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<ul>
-				<li><a href="#"><strong>Link</strong></a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-		</div>
-		<div class="footer-text">
-			<p>
-				All users of our online services are subject to our <a href="#">Privacy Statement</a> and agree to be bound by our <a href="#">Terms of Service</a>.
-				<br/>
-				<br/>
-				American Express Global Business Travel (GBT) is a joint venture that is not wholly owned by American Express Company or any of its subsidiaries (American Express). “American Express Global Business Travel,” “American Express” and the American Express logo are trademarks of American Express and are used under limited license.
-				<br/>
-				<br/>
-				“American Express Meetings & Events” is a service provided by American Express Global Business Travel.
-				<br/>
-				<br/>
-				© 2019 GBT Travel Services UK Limited d/b/a/ American Express Global Business Travel. All rights reserved.
-			</p>
-		</div>
-	</div>
-	<div class="footer-logo"></div>
-</footer> -->
 
 <!-- Scripts -->
 <script src="js/form.js"></script>

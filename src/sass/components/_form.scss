@@ -2,6 +2,110 @@
  * @section Form Styles
  */
 
+h3 {
+	margin-top: 40px !important;
+}
+
+.travel__policy__buttons {
+	display: flex;
+	> div {
+		flex: 1;
+	}
+    label {
+        color: rgba(#D8D8D8, .6);
+        padding: 22px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(#eee, 1);
+        cursor: pointer;
+
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked+label{
+            color: white;
+            background-color: lightblue;
+        }
+    }
+    &:first-of-type {
+        label {
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+        }
+    }
+
+    &:last-of-type {
+        label {
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+            border-right: none;
+        }
+    }
+}
+
+
+
+.slidecontainer {
+	width: 100%;
+	input {
+		-webkit-appearance: none;  /* Override default CSS styles */
+		width: 100%;
+		height: 10px;
+		border-radius: 5px;  
+		background: #eee;
+		outline: none;
+		// opacity: 0.7;
+		border: 2px solid rgba(#ccc, 1) ;
+
+		// transition: opacity .2s;
+		// -webkit-transition: .2s;
+		// -webkit-appearance: none;
+	}
+	input::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%; 
+	  background: #ccc;
+	  cursor: pointer;
+	  border: 2px solid black !important;
+	}
+	input::-moz-range-thumb {
+		-webkit-appearance: none;  /* Override default CSS styles */
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%;
+	  background: #ccc;
+	  cursor: pointer;
+	  border: 2px solid black !important;
+	}
+}
+
+.input-air-travel-label label {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+#_Attenance_Value {
+	&:after {
+		position: relative;
+		content: " People";
+	}
+}
+
+#_Hours_Value {
+	&:after {
+		position: relative;
+		content: " Hours";
+	}
+}
+
  .booking-form {
 	font-family: $BentonSans, sans-serif;
  	// max-width: 730px;

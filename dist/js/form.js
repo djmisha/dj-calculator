@@ -3,6 +3,28 @@
 
 ;(function() {
 
+	/*Range Sliders */
+
+	var sliderPeople = document.getElementById("_Attenance");
+	var outputPeople = document.getElementById("_Attenance_Value");
+	outputPeople.innerHTML = sliderPeople.value; // Display the default sliderPeople value
+
+	// Update the current sliderPeople value (each time you drag the sliderPeople handle)
+	sliderPeople.oninput = function() {
+	  outputPeople.innerHTML = this.value;
+	}
+
+
+	var sliderHiurs = document.getElementById("_Hours");
+	var outputHours = document.getElementById("_Hours_Value");
+	outputHours.innerHTML = sliderHiurs.value; // Display the default sliderHiurs value
+
+	// Update the current sliderHiurs value (each time you drag the sliderHiurs handle)
+	sliderHiurs.oninput = function() {
+	  outputHours.innerHTML = this.value;
+	}
+	
+
 	  /* Toggle Between Sections */
 
 	  function toggleActiveSection() {

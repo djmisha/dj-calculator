@@ -82,7 +82,7 @@ header.booking-header {
 
 
 header, section {
-	padding: 0 20px;
+	// padding: 0 20px;
 	@include media(1280px) {
 		padding: 0 calc(40px + (50% - (1280px / 2)));
 	}

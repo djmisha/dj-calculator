@@ -2,15 +2,6 @@
 /**
  * @section Mixins
  */
-/* line 3, src/sass/components/_variables.scss */
-header img,
-.banner,
-#travel-inquery-form,
-#confirm-details,
-footer {
-  display: none;
-}
-
 /**
  * @section Variables
  */
@@ -153,11 +144,6 @@ header.booking-header img {
   line-height: 42px;
 }
 
-/* line 84, src/sass/components/_base.scss */
-header, section {
-  padding: 0 20px;
-}
-
 @media only screen and (min-width: 1280px) {
   /* line 84, src/sass/components/_base.scss */
   header, section {
@@ -231,11 +217,137 @@ footer .footer-nav {
  * @section Form Styles
  */
 /* line 5, src/sass/components/_form.scss */
+h3 {
+  margin-top: 40px !important;
+}
+
+/* line 9, src/sass/components/_form.scss */
+.travel__policy__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 11, src/sass/components/_form.scss */
+.travel__policy__buttons > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* line 14, src/sass/components/_form.scss */
+.travel__policy__buttons label {
+  color: rgba(216, 216, 216, 0.6);
+  padding: 22px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+
+/* line 25, src/sass/components/_form.scss */
+.travel__policy__buttons input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* line 28, src/sass/components/_form.scss */
+.travel__policy__buttons input:checked + label {
+  color: white;
+  background-color: lightblue;
+}
+
+/* line 34, src/sass/components/_form.scss */
+.travel__policy__buttons:first-of-type label {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+/* line 41, src/sass/components/_form.scss */
+.travel__policy__buttons:last-of-type label {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-right: none;
+}
+
+/* line 51, src/sass/components/_form.scss */
+.slidecontainer {
+  width: 100%;
+}
+
+/* line 53, src/sass/components/_form.scss */
+.slidecontainer input {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #eee;
+  outline: none;
+  border: 2px solid #cccccc;
+}
+
+/* line 67, src/sass/components/_form.scss */
+.slidecontainer input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  border: 2px solid black !important;
+}
+
+/* line 77, src/sass/components/_form.scss */
+.slidecontainer input::-moz-range-thumb {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  border: 2px solid black !important;
+}
+
+/* line 88, src/sass/components/_form.scss */
+.input-air-travel-label label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* line 96, src/sass/components/_form.scss */
+#_Attenance_Value:after {
+  position: relative;
+  content: " People";
+}
+
+/* line 103, src/sass/components/_form.scss */
+#_Hours_Value:after {
+  position: relative;
+  content: " Hours";
+}
+
+/* line 109, src/sass/components/_form.scss */
 .booking-form {
   font-family: "Benton Sans", sans-serif, sans-serif;
 }
 
-/* line 10, src/sass/components/_form.scss */
+/* line 114, src/sass/components/_form.scss */
 .booking-form input,
 .booking-form textarea,
 .booking-form select,
@@ -245,7 +357,7 @@ footer .footer-nav {
   line-height: 24px;
 }
 
-/* line 20, src/sass/components/_form.scss */
+/* line 124, src/sass/components/_form.scss */
 .form-section {
   background: #fff;
   width: 100%;
@@ -255,7 +367,7 @@ footer .footer-nav {
   position: relative;
 }
 
-/* line 26, src/sass/components/_form.scss */
+/* line 130, src/sass/components/_form.scss */
 .form-section-header {
   background: rgba(0, 111, 207, 0.1);
   position: relative;
@@ -266,13 +378,13 @@ footer .footer-nav {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 26, src/sass/components/_form.scss */
+  /* line 130, src/sass/components/_form.scss */
   .form-section-header {
     padding: 40px 100px 40px 100px;
   }
 }
 
-/* line 35, src/sass/components/_form.scss */
+/* line 139, src/sass/components/_form.scss */
 .form-section-header:after {
   content: '';
   position: absolute;
@@ -286,39 +398,39 @@ footer .footer-nav {
           transform: rotate(45deg);
 }
 
-/* line 46, src/sass/components/_form.scss */
+/* line 150, src/sass/components/_form.scss */
 .form-section-header.active-section {
   border-bottom: 3px solid #eee;
   opacity: 1;
   background: #fff;
 }
 
-/* line 50, src/sass/components/_form.scss */
+/* line 154, src/sass/components/_form.scss */
 .form-section-header.active-section:after {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 
-/* line 55, src/sass/components/_form.scss */
+/* line 159, src/sass/components/_form.scss */
 .form-section-container {
   padding: 40px 20px 140px 20px;
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 55, src/sass/components/_form.scss */
+  /* line 159, src/sass/components/_form.scss */
   .form-section-container {
     padding: 40px 100px 140px 100px;
   }
 }
 
-/* line 62, src/sass/components/_form.scss */
+/* line 166, src/sass/components/_form.scss */
 .form-section-container.active-section {
   height: auto;
   display: block;
 }
 
-/* line 69, src/sass/components/_form.scss */
+/* line 173, src/sass/components/_form.scss */
 .input-container {
   position: relative;
   margin-bottom: 20px;
@@ -326,13 +438,13 @@ footer .footer-nav {
   margin-bottom: 20px;
 }
 
-/* line 74, src/sass/components/_form.scss */
+/* line 178, src/sass/components/_form.scss */
 .input-container label {
   display: block;
   color: #006FCF;
 }
 
-/* line 79, src/sass/components/_form.scss */
+/* line 183, src/sass/components/_form.scss */
 .input-container label.required:after {
   content: '*';
   font-size: 25px;
@@ -340,7 +452,7 @@ footer .footer-nav {
   margin-left: 10px;
 }
 
-/* line 86, src/sass/components/_form.scss */
+/* line 190, src/sass/components/_form.scss */
 .input-container input, .input-container select {
   width: calc(100% - 120px);
   max-width: 430px;
@@ -352,12 +464,12 @@ footer .footer-nav {
   border-radius: 0;
 }
 
-/* line 96, src/sass/components/_form.scss */
+/* line 200, src/sass/components/_form.scss */
 .input-container input:focus, .input-container select:focus {
   background: rgba(0, 111, 207, 0.1);
 }
 
-/* line 100, src/sass/components/_form.scss */
+/* line 204, src/sass/components/_form.scss */
 .input-container select {
   width: 100%;
   -webkit-appearance: none;
@@ -371,7 +483,7 @@ footer .footer-nav {
   background-size: 20px 20px;
 }
 
-/* line 110, src/sass/components/_form.scss */
+/* line 214, src/sass/components/_form.scss */
 .input-container input[type=date] {
   background: url("../svg/icon-date.svg");
   background-position: right 5px center;
@@ -379,7 +491,7 @@ footer .footer-nav {
   background-size: 23px 30px;
 }
 
-/* line 116, src/sass/components/_form.scss */
+/* line 220, src/sass/components/_form.scss */
 .input-container input[type=time] {
   background: url("../svg/icon-time.svg");
   background-position: right 3px center;
@@ -387,7 +499,7 @@ footer .footer-nav {
   background-size: 29px 28px;
 }
 
-/* line 122, src/sass/components/_form.scss */
+/* line 226, src/sass/components/_form.scss */
 .input-container .icon-validation {
   height: 36px;
   width: 36px;
@@ -400,17 +512,17 @@ footer .footer-nav {
   right: 0;
 }
 
-/* line 132, src/sass/components/_form.scss */
+/* line 236, src/sass/components/_form.scss */
 .input-container .icon-validation.valid {
   background: url("../svg/icon-valid.svg");
 }
 
-/* line 138, src/sass/components/_form.scss */
+/* line 242, src/sass/components/_form.scss */
 .input-container-checkbox {
   margin-bottom: 30px;
 }
 
-/* line 140, src/sass/components/_form.scss */
+/* line 244, src/sass/components/_form.scss */
 .input-container-checkbox input {
   color: #0C0B68;
   width: 20px;
@@ -418,23 +530,23 @@ footer .footer-nav {
   border: 1px solid blue;
 }
 
-/* line 146, src/sass/components/_form.scss */
+/* line 250, src/sass/components/_form.scss */
 .input-container-checkbox label {
   color: #0C0B68;
 }
 
-/* line 153, src/sass/components/_form.scss */
+/* line 257, src/sass/components/_form.scss */
 .input-return-trip.hidden {
   display: none;
 }
 
 /* Form Tabs */
-/* line 161, src/sass/components/_form.scss */
+/* line 265, src/sass/components/_form.scss */
 #requested-travel-services .form-section-container {
   padding-top: 0;
 }
 
-/* line 166, src/sass/components/_form.scss */
+/* line 270, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,14 +561,14 @@ footer .footer-nav {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 166, src/sass/components/_form.scss */
+  /* line 270, src/sass/components/_form.scss */
   .form-section-tabs ul.tab-choises {
     width: calc(100% + 200px);
     margin-left: -100px;
   }
 }
 
-/* line 177, src/sass/components/_form.scss */
+/* line 281, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li {
   width: 25%;
   min-height: 40px;
@@ -470,7 +582,7 @@ footer .footer-nav {
   transition: background .25s ease-in-out;
 }
 
-/* line 187, src/sass/components/_form.scss */
+/* line 291, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li a {
   position: absolute;
   border-bottom: 10px solid rgba(0, 111, 207, 0.1);
@@ -487,7 +599,7 @@ footer .footer-nav {
   transition: background .25s ease-in-out;
 }
 
-/* line 202, src/sass/components/_form.scss */
+/* line 306, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li span {
   font-size: 16px;
   line-height: 16px;
@@ -498,37 +610,37 @@ footer .footer-nav {
   z-index: 1;
 }
 
-/* line 211, src/sass/components/_form.scss */
+/* line 315, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li:last-of-type {
   border-right: none;
 }
 
-/* line 214, src/sass/components/_form.scss */
+/* line 318, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active {
   background: #fff;
 }
 
-/* line 216, src/sass/components/_form.scss */
+/* line 320, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active a {
   background-position: center 20px !important;
 }
 
-/* line 222, src/sass/components/_form.scss */
+/* line 326, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane {
   display: none;
 }
 
-/* line 224, src/sass/components/_form.scss */
+/* line 328, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane.active {
   display: block;
 }
 
-/* line 228, src/sass/components/_form.scss */
+/* line 332, src/sass/components/_form.scss */
 .form-section-tabs .tab-content {
   padding-top: 40px;
 }
 
-/* line 231, src/sass/components/_form.scss */
+/* line 335, src/sass/components/_form.scss */
 .form-section-tabs .icon-rail a {
   background: url("../svg/icon-rail.svg") !important;
   background-position: center center !important;
@@ -536,7 +648,7 @@ footer .footer-nav {
   background-size: 45px 54px !important;
 }
 
-/* line 237, src/sass/components/_form.scss */
+/* line 341, src/sass/components/_form.scss */
 .form-section-tabs .icon-bus a {
   background: url("../svg/icon-bus.svg") !important;
   background-position: center center !important;
@@ -544,7 +656,7 @@ footer .footer-nav {
   background-size: 46px 54px !important;
 }
 
-/* line 243, src/sass/components/_form.scss */
+/* line 347, src/sass/components/_form.scss */
 .form-section-tabs .icon-visa a {
   background: url("../svg/icon-visa.svg") !important;
   background-position: center center !important;
@@ -552,7 +664,7 @@ footer .footer-nav {
   background-size: 42px 58px !important;
 }
 
-/* line 249, src/sass/components/_form.scss */
+/* line 353, src/sass/components/_form.scss */
 .form-section-tabs .icon-insurance a {
   background: url("../svg/icon-insurance.svg") !important;
   background-position: center center !important;
@@ -561,12 +673,12 @@ footer .footer-nav {
 }
 
 /* Form Details Table */
-/* line 259, src/sass/components/_form.scss */
+/* line 363, src/sass/components/_form.scss */
 .details-table {
   padding-bottom: 40px;
 }
 
-/* line 263, src/sass/components/_form.scss */
+/* line 367, src/sass/components/_form.scss */
 .details-table .table-header {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
@@ -574,7 +686,7 @@ footer .footer-nav {
   color: #006FCF;
 }
 
-/* line 269, src/sass/components/_form.scss */
+/* line 373, src/sass/components/_form.scss */
 .details-table .table-row {
   padding: 10px 10px 7px 10px;
   margin-left: 2vw;
@@ -588,29 +700,29 @@ footer .footer-nav {
           justify-content: space-between;
 }
 
-/* line 276, src/sass/components/_form.scss */
+/* line 380, src/sass/components/_form.scss */
 .details-table .table-row > div {
   width: 50%;
 }
 
-/* line 279, src/sass/components/_form.scss */
+/* line 383, src/sass/components/_form.scss */
 .details-table .table-row:last-of-type {
   display: none;
 }
 
-/* line 283, src/sass/components/_form.scss */
+/* line 387, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #0C0B68;
 }
 
-/* line 286, src/sass/components/_form.scss */
+/* line 390, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #006FCF;
   text-align: left;
 }
 
 /* Buttons */
-/* line 295, src/sass/components/_form.scss */
+/* line 399, src/sass/components/_form.scss */
 button.next,
 button.next-tab,
 input.button {
@@ -625,12 +737,12 @@ input.button {
   font-weight: 100;
 }
 
-/* line 309, src/sass/components/_form.scss */
+/* line 413, src/sass/components/_form.scss */
 button.next-tab {
   z-index: 1;
 }
 
-/* line 313, src/sass/components/_form.scss */
+/* line 417, src/sass/components/_form.scss */
 button.edit {
   position: absolute;
   bottom: 40px;
