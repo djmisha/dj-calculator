@@ -108,31 +108,35 @@
 				formData.push(singleInputFieldData);
 			}
 		}
-		console.log(formData)
 	}
 
 	scanPageforFormValues();
 
 	function calculateRate() {
 
-			
 		var hoursInput = document.getElementById('_Hours');
 		hoursInput = hoursInput.value;
 
 		var attenanceInput = document.getElementById('_Attenance');
-		attenanceInput = attenanceInput.value
-		console.log(attenanceInput);
+		attenanceInput = attenanceInput.value;
 
-		var partyRate; 
+		var PrivatePartyInput = document.getElementById('_Private_Party');
+		PrivatePartyInput = PrivatePartyInput.value;
+
+
+
+		var partyTypeRate; 
+
 		var soundRate = 200;
 		var lightingRate = 0;
+
 		var djRate = 100;
 
 		var hours = hoursInput;
-		var people = attenanceInput;
+		var people = parseInt(attenanceInput);
 
 
-		var totalRate = Math.round((djRate * hours));
+		var totalRate = djRate * hours + people;
 
 		console.log(totalRate);
 
