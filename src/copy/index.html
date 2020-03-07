@@ -1,310 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Amex GTB - Portal</title>
+	<title>DJ Average Hourly Rate Calculator</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 
-<!-- 	<header class="booking-header">
-		<img src="./svg/icon-logo.svg" alt="AMEX Logo"> 
-	</header>
- -->
-<!-- 	<section class="banner">
-		<h1>Welcome To Your Global Portal</h1>
-		<span>Lorem ipsum dolor sit</span>
-	</section> -->
-	
-	<section class="booking-form">
-		<form id="form">
-		<!-- 	<div class="form-section form-area" id="travel-inquiry-form">
-				<div class="form-section-header active-section">
-					<h2>Contact Details</h2>
-					<input type="hidden" value="Travel Inquiry Form">
-				</div>
-				<div class="form-section-container active-section">
-					<p>Please fill out your contact information</p>
-
-					<div class="input-container">
-						<label for="travelerName">Name</label>
-						<input type="text" name="travelerName" data-name="Name">
-						<div class="icon-validation"></div>
-					</div>
-
-					<div class="input-container">
-						<label for="travelerEmail">Email</label>
-						<input type="email" name="travelerEmail" data-name="Email">
-						<div class="icon-validation"></div>
-					</div>
-
-					<div class="input-container">
-						<label for="phoneNumber">Phone Number</label>
-						<input type="tel" name="phoneNumber" data-name="Phone Number">
-						<div class="icon-validation"></div>
-					</div>
-					 
-
-					<button class="next">Next</button>
-				</div>
-			</div>  -->
-			<!-- End Form Section -->
-			<div class="form-section" id="requested-travel-services">
-
-				<div class="form-section-header">
-					<h2>Event Details</h2>
-				</div>
-
-				<div class="form-section-container">
-					<div class="form-section-tabs">
-						<ul class="tab-choises" id="nav-tab">
-							<li class="tab-icon icon-rail active"><a href="#tab-content-rail"></a><span>Rail</span></li>
-							<li class="tab-icon icon-bus"><a href="#tab-content-bus"></a><span>Bus</span></li>
-							<!-- <li class="tab-icon icon-visa"><a href="#tab-content-visas"></a><span>Visa</span></li> -->
-							<li class="tab-icon icon-insurance"><a href="#tab-content-insurance"></a><span>Travel Insurance</span></li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane form-area active" id="tab-content-rail">
-								<!-- <h3>Event Details</h3> -->
-								<input type="hidden" value="Event Details">
-
-								<h3>Select Event Type:</h3>
-								<div class="travel__policy__buttons">
-
-								    <div class="policy__button">
-								        <input type="radio" id="_Private_Party" name="_RateTravelPolicy" value="None" data-error="#_RateTravelPolicy_Err">
-								        <label for="_Private_Party">Private Party</label>
-								    </div>
-								    <div class="policy__button">
-
-								        <input type="radio" id="_Corporate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
-								        <label for="_Corporate">Corporate</label>
-								    </div>
-								    <div class="policy__button">
-								        <input type="radio" id="_Wedding" name="_RateTravelPolicy" value="Controlled" data-error="#_RateTravelPolicy_Err">
-								        <label for="_Wedding">Wedding</label>
-								    </div>
-								</div>
-								
-								<h3>How many hours should the DJ play music?</h3>
-
-								<div class="form-input-row-input input-air-travel">
-								    <div class="input-air-travel-label">
-								        <label for="_Hours">
-								                <div id="_Hours_Value"></div>
-								        </label>
-								    </div>
-								    <div class="slidecontainer">
-								        <input type="range" min="2" max="8" value="5" class="range-slider" id="_Hours" name="_Hours">
-								    </div>
-								</div>
-
-								<h3>How many people are you expecting?</h3>
-	
-								<div class="form-input-row-input input-air-travel">
-								    <div class="input-air-travel-label">
-								        <label for="_Attenance">
-								                <div id="_Attenance_Value"></div>
-								        </label>
-								    </div>
-								    <div class="slidecontainer">
-								        <input type="range" min="25" max="500" value="100" class="range-slider" id="_Attenance" name="_Attenance">
-								    </div>
-								</div>
-
-								<h3>Would you like sound system (PA)?</h3> 
-
-								<div class="travel__policy__buttons">
-								    <div class="policy__button">
-								        <input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes, please!" data-error="#_RateTravelPolicy_Err">
-								        <label for="_SoundSystemYes">Yes, please!</label>
-								    </div>
-								    <div class="policy__button">
-
-								        <input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-error="#_RateTravelPolicy_Err">
-								        <label for="_SoundSystemNo">No, I have a sound system.</label>
-								    </div>
-								</div>
-
-								<h3>Would you like a lighting system?</h3>
-
-								<div class="travel__policy__buttons">
-								    <div class="policy__button">
-								        <input type="radio" id="_RateTravelPolicy_None" name="_RateTravelPolicy" value="None" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_None">Yes, I need lighting</label>
-								    </div>
-								    <div class="policy__button">
-
-								        <input type="radio" id="_RateTravelPolicy_Moderate" name="_RateTravelPolicy" value="Moderate" data-error="#_RateTravelPolicy_Err">
-								        <label for="_RateTravelPolicy_Moderate">No, I don't need lighting</label>
-								    </div>
-								</div>
+<section class="booking-form">
+	<form id="form">
+		<div class="form-section" id="requested-travel-services">
+			<div class="form-section-tabs">
+				<ul class="tab-choises" id="nav-tab">
+					<li class="tab-icon icon-rail active"><a href="#tab-content-event-details"></a><span>1. Event Details</span></li>
+					<li class="tab-icon icon-bus"><a href="#tab-content-dj-rate"></a><span>2. Your Rate</span></li>
+					<li class="tab-icon icon-insurance"><a href="#tab-content-hire"></a><span>3. Book DJ</span></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane form-area active" id="tab-content-event-details">
+						<input type="hidden" value="Event Details">
 
 
-								<button class="next-tab">Next</button>
+						<h3>Event type</h3>
+						<div class="travel__policy__buttons">
 
+							<div class="policy__button">
+								<input type="radio" id="_Private_Party" name="_RateTravelPolicy" value="Private Party" data-error="#_RateTravelPolicy_Err" data-name="Private Party">
+								<label for="_Private_Party" name="Private Party">Private Party</label>
 							</div>
-							<!-- <div class="tab-pane form-area" id="tab-content-bus">
-								<h3>Bus</h3>
-								<input type="hidden" value="Bus">
-								<div class="input-container">
-									<label for="busFrom" class="required">From</label>
-									<input type="text" name="busFrom" data-name="From">
-									<div class="icon-validation"></div>
-								</div>
+							<div class="policy__button">
 
-								<div class="input-container">
-									<label for="busTo" class="required">To</label>
-									<input type="text" name="busTo" data-name="To">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="busOnwardDate" class="required">Onward Date</label>
-									<input type="date" name="busOnwardDate" data-name="Onward Date">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="busReturnDate">Return Date</label>
-									<input type="date" name="busReturnDate" data-name="Return Date">
-									<div class="icon-validation"></div>
-								</div>
-								<button class="next-tab">Next</button>
-
+								<input type="radio" id="_Corporate" name="_RateTravelPolicy" value="Corporate" data-error="#_RateTravelPolicy_Err" data-name="Corporate">
+								<label for="_Corporate" name="Corporate">Corporate</label>
 							</div>
-							<div class="tab-pane form-area" id="tab-content-visas">
-								<h3>Visas</h3>
-								<input type="hidden" value="Visas">
-								<div class="input-container">
-									<label for="visasLocationOfTraveler" class="required">Working City / Location of Traveler</label>
-									<input type="text" name="visasLocationOfTraveler" data-name="Location of Traveler">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visaCountryOfRequiredVisa" class="required">Country Of Required Visa</label>
-									<select name="viasaCountryOfRequiredVisa" data-name="Country Of Required Visa">
-										<option value="Value">Value</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visaTypeOfVisa" class="required">Type of Visa</label>
-									<select name="viasaTypeOfVisa" data-name="Type of Visa">
-										<option value="Business">Business</option>
-										<option value="Single Entry">Single Entry</option>
-										<option value="Multiple Entry">Multiple Entry</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visaPassportCountryOfIssue">Passport Country Of Issue</label>
-									<select name="viasaPassportCountryOfIssue" data-name="Passport Country Of Issue">
-										<option value="Value">Value</option>
-									</select>
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visaPassportExpiryDate">Passport Expiry Date</label>
-									<input type="date" name="visaPassportExpiryDate" data-name="Passport Expiry Date">
-									<div class="icon-validation"></div>
-								</div>
-								<p>Passports should have 6 months validity.</p>
-
-								<div class="input-container">
-									<label for="visasNationalityOfTraveler" class="required">Nationality of Traveler</label>
-									<input type="text" name="visasNationalityOfTraveler" data-name="Nationality of Traveler">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visasDateOfTravel" class="required">Date of Travel</label>
-									<input type="date" name="visasDateOfTravel" data-name=" Visas Date of Travel">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="visasAdditionalRemarks">Additional remarks, if any</label>
-									<input type="text" name="visasAdditionalRemarks" data-name="Additional remarks">
-									<div class="icon-validation"></div>
-								</div>
-
-								<button class="next-tab">Next</button>
-								
+							<div class="policy__button">
+								<input type="radio" id="_Wedding" name="_RateTravelPolicy" value="Wedding" data-error="#_RateTravelPolicy_Err" data-name="Wedding">
+								<label for="_Wedding" name="Wedding">Wedding</label>
 							</div>
-							<div class="tab-pane form-area" id="tab-content-insurance">
-								<h3>Insurance</h3>
-								<input type="hidden" value="Insurance">
-								<div class="input-container">
-									<label for="insuranceDateOfBirth" class="required">Date of Birth</label>
-									<input type="date" name="insuranceDateOfBirth" data-name="Date of Birth">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="insuranceNomineesNameForInsurance" class="required">Nominees Name for Insurance</label>
-									<input type="text" name="insuranceNomineesNameForInsurance" data-name="Nominees Name for Insurance">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="insuranceTravelStartDate" class="required">Travel Start Date</label>
-									<input type="date" name="insuranceTravelStartDate" data-name="Travel Start Date">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="insuranceTravelEndDate" class="required">Travel End Date</label>
-									<input type="date" name="insuranceTravelEndDate" data-name="Travel End Date">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="insuranceTravelCityName">Travel City Name</label>
-									<input type="text" name="insuranceTravelCityName" data-name="Travel City Name">
-									<div class="icon-validation"></div>
-								</div>
-
-								<div class="input-container">
-									<label for="insuranceDestinationCountryName" class="required">Destination Country</label>
-									<input type="text" name="insuranceDestinationCountryName" data-name="Destination Country">
-									<div class="icon-validation"></div>
-								</div>
-
-							</div> -->
 						</div>
-					</div>	
 
-					<button class="next" id="create-details">Next</button>
-				</div>
-			</div>
-			<!-- End Form Section -->
-			<div class="form-section" id="confirm-details">
-				<div class="form-section-header">
-					<h2>Confirm Details</h2>
-				</div>
-				<div class="form-section-container">
-					<div class="details-table" id="details-target">
-						<div class="table-header">Travel Details</div>
+						<h3>How many people are you expecting?</h3>
 
+						<div class="form-input-row-input input-air-travel">
+							<div class="input-air-travel-label">
+								<label for="_Attenance">
+									<div id="_Attenance_Value"></div>
+								</label>
+							</div>
+							<div class="slidecontainer">
+								<input type="range" min="25" max="500" value="100" class="range-slider" id="_Attenance" name="_Attenance" data-name="Attenance">
+							</div>
+						</div>
+
+						<h3>How many hours should the DJ play music?</h3>
+
+						<div class="form-input-row-input input-air-travel">
+							<div class="input-air-travel-label">
+								<label for="_Hours">
+									<div id="_Hours_Value"></div>
+								</label>
+							</div>
+							<div class="slidecontainer">
+								<input type="range" min="2" max="8" value="5" class="range-slider" id="_Hours" name="_Hours" data-name="DJ Hours">
+							</div>
+						</div>
+
+						<h3>Do you need a sound system?</h3> 
+
+						<div class="travel__policy__buttons">
+							<div class="policy__button">
+								<input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes, please!" data-error="#_RateTravelPolicy_Err" data-name="Sound">
+								<label for="_SoundSystemYes">Yes, please!</label>
+							</div>
+							<div class="policy__button">
+
+								<input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-error="#_RateTravelPolicy_Err" data-name="Sound">
+								<label for="_SoundSystemNo">No</label>
+							</div>
+						</div>
+
+						<h3>Do you need a lighting system?</h3>
+
+						<div class="travel__policy__buttons">
+							<div class="policy__button">
+								<input type="radio" id="_RateTravelPolicy_None" name="_RateTravelPolicy" value="Yes, Sound System" data-error="#_RateTravelPolicy_Err" data-name="Lighting">
+								<label for="_RateTravelPolicy_None">Yes, please!</label>
+							</div>
+							<div class="policy__button">
+								<input type="radio" id="_RateTravelPolicy_Moderate" name="_RateTravelPolicy" value="No" data-error="#_RateTravelPolicy_Err" data-name="Lighting">
+								<label for="_RateTravelPolicy_Moderate">No</label>
+							</div>
+						</div>
+
+						<button class="next-tab">Next</button>
 					</div>
 
-					<button class="edit" id="edit-details">Edit Details</button>
-					<input type="submit" class="button" value="Submit Details" data-name="">
+					<div class="tab-pane form-area" id="tab-content-dj-rate">
+						<!-- <div class="form-section" id="confirm-details"> -->
+							<div class="details-table" id="details-target">
+								<div class="table-header">Travel Details</div>
+							</div>
+						<!-- </div>  -->
+						<button class="edit" id="edit-details">Change</button>
+						<button class="next-tab">Next</button>
+					</div>
+
+					<div class="tab-pane form-area" id="tab-content-hire">
+						<!-- <div class="form-section"> -->
+							<!-- <div class="form-section-container active-section"> -->
+								<p>Please fill out your contact information to book at DJ. Our team will reach out to your shorly. </p>
+
+								<div class="input-container">
+									<label for="travelerName">Your Name</label>
+									<input type="text" name="travelerName" data-name="Name">
+									<div class="icon-validation"></div>
+								</div>
+
+								<div class="input-container">
+									<label for="travelerEmail">Email Address</label>
+									<input type="email" name="travelerEmail" data-name="Email">
+									<div class="icon-validation"></div>
+								</div>
+
+								<div class="input-container">
+									<label for="phoneNumber">Phone Number</label>
+									<input type="tel" name="phoneNumber" data-name="Phone Number">
+									<div class="icon-validation"></div>
+								</div>
+								<input type="submit" class="button" value="Send" data-name="">
+							<!-- </div> -->
+						<!-- </div>  -->
+					</div>
 				</div>
-			</div> 
+			</div>	
 		</div>
-		<!-- End Booking Form -->
 	</form>
+
+	<div id="theRate"></div>
 </section>
 
 
 <!-- Scripts -->
 <script src="js/form.js"></script>
-<script src="js/main.polyfills.js"></script>
+
 </body>
 </html>

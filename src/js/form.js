@@ -11,8 +11,7 @@
 	// Update the current sliderPeople value (each time you drag the sliderPeople handle)
 	sliderPeople.oninput = function() {
 	  outputPeople.innerHTML = this.value;
-	}
-
+	};
 
 	var sliderHiurs = document.getElementById("_Hours");
 	var outputHours = document.getElementById("_Hours_Value");
@@ -21,77 +20,9 @@
 	// Update the current sliderHiurs value (each time you drag the sliderHiurs handle)
 	sliderHiurs.oninput = function() {
 	  outputHours.innerHTML = this.value;
-	}
+	};
 	
 
-	  /* Toggle Between Sections */
-
-	  function toggleActiveSection() {
-	  	var sectionHeaders = document.getElementsByClassName("form-section-header");
-	  	for ( var g = 0; g < sectionHeaders.length; g++) {
-
-	  		/*Temporary code to show all sections while Building Page */
-			sectionHeaders[g].classList.add("active-section");
-			sectionHeaders[g].nextElementSibling.classList.add("active-section");
-			/* End Temporary while Building Page */
-
-			sectionHeaders[g].addEventListener("click", function() {
-
-				this.classList.toggle("active-section");
-				var sectionContainer = this.nextElementSibling;
-
-				if (sectionContainer.classList.contains('active-section')) {
-					sectionContainer.classList.remove('active-section');
-				} else {
-					sectionContainer.classList.add('active-section');
-				}
-			});
-		} 
-	}
-
-	toggleActiveSection();
-
-
-	/* Next Button Moves Form Forward to Next Section */
-
-	function advanceNextSection() {
-		var nextButtons = document.getElementsByClassName('next');
-		for (var b = 0; b < nextButtons.length; b++) {
-			nextButtons[b].addEventListener('click', function(event){
-				event.preventDefault();
-				this.parentElement.classList.remove('active-section');
-				this.parentElement.previousElementSibling.classList.remove('active-section');
-				var nextSection = this.parentElement.parentElement.nextElementSibling.children;
-				for ( var n = 0; n < nextSection.length; n++) {
-					nextSection[n].classList.add('active-section');
-				}
-			});
-		}
-	}
-
-	advanceNextSection();
-
-
-	/* Edit All Sections Button */
-
-	function EditAllSectionsButton() {
-		var editButton = document.getElementById("edit-details");
-		editButton.addEventListener('click', function(event) {
-			event.preventDefault();
-			var sectionHeaders = document.getElementsByClassName("form-section-header");
-			for ( var g = 0; g < sectionHeaders.length; g++) {
-				sectionHeaders[g].classList.add("active-section");
-				sectionHeaders[g].nextElementSibling.classList.add("active-section");
-			} 
-
-			var formDistanceFromTop = isItemInView(topOfTabs);
-
-			console.log(formDistanceFromTop);
-			window.scrollTo(0,formDistanceFromTop);
-		});
-	}
-
-	EditAllSectionsButton();
 
 
 	/* Switch Between Tabs*/
@@ -152,17 +83,20 @@
 
 	function scanPageforFormValues() {
 		for(var i = 0; i < formFields.length; i++) {
-			/* Select Fields */
-			if (formFields[i].localName === 'select') {
-				var singleSelectFieldData = {
-					name: formFields[i].name,
-					label: formFields[i].dataset.name,
-					value: formFields[i].value,
-					type: formFields[i].type,
+			// console.log(formFields[i]);
+	
 
-				};
-				formData.push(singleSelectFieldData);
-			}
+			/* Select Fields */
+			// if (formFields[i].localName === 'select') {
+			// 	var singleSelectFieldData = {
+			// 		name: formFields[i].name,
+			// 		label: formFields[i].dataset.name,
+			// 		value: formFields[i].value,
+			// 		type: formFields[i].type,
+
+			// 	};
+			// 	formData.push(singleSelectFieldData);
+			// }
 			/* Input Fields */
 			if (formFields[i].localName === 'input' ) {
 				var singleInputFieldData = {
@@ -174,9 +108,41 @@
 				formData.push(singleInputFieldData);
 			}
 		}
+		console.log(formData)
 	}
 
 	scanPageforFormValues();
+
+	function calculateRate() {
+
+			
+		var hoursInput = document.getElementById('_Hours');
+		hoursInput = hoursInput.value;
+
+		var attenanceInput = document.getElementById('_Attenance');
+		attenanceInput = attenanceInput.value
+		console.log(attenanceInput);
+
+		var partyRate; 
+		var soundRate = 200;
+		var lightingRate = 0;
+		var djRate = 100;
+
+		var hours = hoursInput;
+		var people = attenanceInput;
+
+
+		var totalRate = Math.round((djRate * hours));
+
+		console.log(totalRate);
+
+		function attachRate() {
+			document.getElementById('theRate').innerHTML = totalRate;
+		}
+		attachRate();
+	}
+
+	calculateRate();
 
 
 	function buildConfirmationTable() {
@@ -227,12 +193,12 @@
 	function validateFieldAndPushIntoArray() {
 		var form = document.getElementById('form');
 		form.addEventListener('change', function (event) {
-			if(!event.target.value) {
-				event.target.nextElementSibling.classList.remove('valid');  
-			}
-			else {
-				event.target.nextElementSibling.classList.add('valid');  
-			}
+			// if(!event.target.value) {
+			// 	event.target.nextElementSibling.classList.remove('valid');  
+			// }
+			// else {
+			// 	event.target.nextElementSibling.classList.add('valid');  
+			// }
 			for(var i = 0; formData.length > i; i++) { 
 				if (formData[i].name == event.target.name) {
 					formData[i].value = event.target.value;
@@ -240,6 +206,7 @@
 						formData[i].value = "Yes";
 					}
 					buildConfirmationTable();
+					calculateRate();
 				}
 			}
 		}, true);
@@ -250,28 +217,28 @@
 
 	/* Toggle Return Trip Show Hide */
 
-	function showReturnTripDates() {
-		var returnTripFields = document.getElementsByClassName('input-return-trip');
-		for (i = 0; i < returnTripFields.length; i++) {
-			returnTripFields[i].classList.add('hidden');
-		}
+	// function showReturnTripDates() {
+	// 	var returnTripFields = document.getElementsByClassName('input-return-trip');
+	// 	for (i = 0; i < returnTripFields.length; i++) {
+	// 		returnTripFields[i].classList.add('hidden');
+	// 	}
 
-		var typeOfReservation = document.getElementById('typeOfReso');
+	// 	var typeOfReservation = document.getElementById('typeOfReso');
 
-		typeOfReservation.addEventListener('change', function(event) {
-			if (typeOfReservation.value === "Round Trip") {
-				for (i = 0; i < returnTripFields.length; i++) {
-					returnTripFields[i].classList.remove('hidden');
-				}	
-			}
-			if (typeOfReservation.value === "One Way") {
-				for (i = 0; i < returnTripFields.length; i++) {
-					returnTripFields[i].classList.add('hidden');
-				}	
-			}
-		});
-	}
+	// 	typeOfReservation.addEventListener('change', function(event) {
+	// 		if (typeOfReservation.value === "Round Trip") {
+	// 			for (i = 0; i < returnTripFields.length; i++) {
+	// 				returnTripFields[i].classList.remove('hidden');
+	// 			}	
+	// 		}
+	// 		if (typeOfReservation.value === "One Way") {
+	// 			for (i = 0; i < returnTripFields.length; i++) {
+	// 				returnTripFields[i].classList.add('hidden');
+	// 			}	
+	// 		}
+	// 	});
+	// }
 
-	showReturnTripDates();
+	// showReturnTripDates();
 
 })();
