@@ -6,17 +6,18 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	background: #fff;
-	font-size: 16px;
-	line-height: 20px;
+	font-size: 14px;
+	line-height: 18px;
 	color: $black;
+	font-family: 'OpenSans', Arial, sans-serif;
 }
 
 h1,
-span,
 h2, 
 h3,
+span,
 p {
-	font-family: $BentonSans, sans-serif;
+	font-family: 'OpenSans', Arial, sans-serif;
 	margin: 0px;
 	padding: 0px;
 	font-weight: normal;
@@ -25,21 +26,21 @@ p {
 h1 {
 	font-weight: normal;
 	color: #006FCF;
-	font-size: 25px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 h2 {
 	color: #006FCF;
-	font-size: 25px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 22px;
 }
 
 h3 {
 	color: #006FCF;
 	font-size: 18px;
 	line-height: 22px;
-	font-weight: bold;
+	// font-weight: bold;
 }
 
 p {
