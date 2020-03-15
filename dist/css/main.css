@@ -110,59 +110,69 @@ h1 {
   display: block;
   background: #64b5f6;
   color: #fff;
-  padding: 5PX 10px;
+  padding: 10px;
   margin-bottom: 0;
 }
 
-/* line 14, src/sass/components/_form.scss */
-#theRate {
-  padding-top: 40px;
-  text-align: center;
-  color: green;
-  font-size: 30px;
+/* line 15, src/sass/components/_form.scss */
+header {
+  position: relative;
 }
 
 /* line 19, src/sass/components/_form.scss */
+#theRate {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+/* line 27, src/sass/components/_form.scss */
 #theRate:before {
   content: '$';
 }
 
-/* line 24, src/sass/components/_form.scss */
+/* line 32, src/sass/components/_form.scss */
 #theRange {
+  position: absolute;
+  font-size: 12px;
+  top: 25px;
+  right: 15px;
   color: #ccc;
   text-align: center;
   padding-top: 20px;
 }
 
-/* line 29, src/sass/components/_form.scss */
+/* line 40, src/sass/components/_form.scss */
 #theRange:before {
-  display: block;
-  content: 'Cost Range ';
+  content: 'Range ';
 }
 
-/* line 36, src/sass/components/_form.scss */
+/* line 46, src/sass/components/_form.scss */
 h3 {
-  margin-top: 20px !important;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 0px;
+  margin-top: 20px !important;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
-/* line 44, src/sass/components/_form.scss */
+/* line 53, src/sass/components/_form.scss */
 .travel__policy__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 46, src/sass/components/_form.scss */
+/* line 55, src/sass/components/_form.scss */
 .travel__policy__buttons > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-/* line 49, src/sass/components/_form.scss */
+/* line 58, src/sass/components/_form.scss */
 .travel__policy__buttons label {
   color: #0c0b68;
   padding: 18px 10px;
@@ -180,24 +190,24 @@ h3 {
   background-color: rgba(0, 111, 207, 0.1);
 }
 
-/* line 60, src/sass/components/_form.scss */
+/* line 69, src/sass/components/_form.scss */
 .travel__policy__buttons input {
   position: absolute;
   opacity: 0;
 }
 
-/* line 63, src/sass/components/_form.scss */
+/* line 72, src/sass/components/_form.scss */
 .travel__policy__buttons input:checked + label {
   color: white;
   background-color: #006FCF;
 }
 
-/* line 86, src/sass/components/_form.scss */
+/* line 95, src/sass/components/_form.scss */
 .slidecontainer {
   width: 100%;
 }
 
-/* line 88, src/sass/components/_form.scss */
+/* line 97, src/sass/components/_form.scss */
 .slidecontainer input {
   -webkit-appearance: none;
   /* Override default CSS styles */
@@ -209,7 +219,7 @@ h3 {
   border: 2px solid white;
 }
 
-/* line 102, src/sass/components/_form.scss */
+/* line 111, src/sass/components/_form.scss */
 .slidecontainer input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -221,7 +231,7 @@ h3 {
   border: 2px solid rgba(0, 111, 207, 0.1) !important;
 }
 
-/* line 112, src/sass/components/_form.scss */
+/* line 121, src/sass/components/_form.scss */
 .slidecontainer input::-moz-range-thumb {
   -webkit-appearance: none;
   /* Override default CSS styles */
@@ -233,7 +243,7 @@ h3 {
   border: 2px solid rgba(0, 111, 207, 0.1) !important;
 }
 
-/* line 123, src/sass/components/_form.scss */
+/* line 132, src/sass/components/_form.scss */
 .input-air-travel-label label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,24 +255,24 @@ h3 {
   font-size: 16px;
 }
 
-/* line 131, src/sass/components/_form.scss */
+/* line 140, src/sass/components/_form.scss */
 #_Attenance_Value:after {
   position: relative;
   content: " People";
 }
 
-/* line 138, src/sass/components/_form.scss */
+/* line 147, src/sass/components/_form.scss */
 #_Hours_Value:after {
   position: relative;
   content: " Hours";
 }
 
-/* line 144, src/sass/components/_form.scss */
+/* line 153, src/sass/components/_form.scss */
 .booking-form {
   font-family: 'OpenSans', sans-serif;
 }
 
-/* line 149, src/sass/components/_form.scss */
+/* line 158, src/sass/components/_form.scss */
 .booking-form input,
 .booking-form textarea,
 .booking-form select,
@@ -272,33 +282,33 @@ h3 {
   line-height: 24px;
 }
 
-/* line 159, src/sass/components/_form.scss */
+/* line 168, src/sass/components/_form.scss */
 .form-section {
   background: #fff;
   width: 100%;
   position: relative;
 }
 
-/* line 197, src/sass/components/_form.scss */
+/* line 206, src/sass/components/_form.scss */
 .form-section-container {
   padding: 40px 20px 140px 20px;
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 197, src/sass/components/_form.scss */
+  /* line 206, src/sass/components/_form.scss */
   .form-section-container {
     padding: 40px 100px 140px 100px;
   }
 }
 
-/* line 204, src/sass/components/_form.scss */
+/* line 213, src/sass/components/_form.scss */
 .form-section-container.active-section {
   height: auto;
   display: block;
 }
 
-/* line 211, src/sass/components/_form.scss */
+/* line 220, src/sass/components/_form.scss */
 .input-container {
   position: relative;
   margin-bottom: 20px;
@@ -306,13 +316,13 @@ h3 {
   margin-bottom: 20px;
 }
 
-/* line 216, src/sass/components/_form.scss */
+/* line 225, src/sass/components/_form.scss */
 .input-container label {
   display: block;
   color: #90caf9;
 }
 
-/* line 221, src/sass/components/_form.scss */
+/* line 230, src/sass/components/_form.scss */
 .input-container label.required:after {
   content: '*';
   font-size: 25px;
@@ -320,7 +330,7 @@ h3 {
   margin-left: 10px;
 }
 
-/* line 228, src/sass/components/_form.scss */
+/* line 237, src/sass/components/_form.scss */
 .input-container input, .input-container select {
   width: calc(100% - 120px);
   max-width: 430px;
@@ -332,12 +342,12 @@ h3 {
   border-radius: 0;
 }
 
-/* line 238, src/sass/components/_form.scss */
+/* line 247, src/sass/components/_form.scss */
 .input-container input:focus, .input-container select:focus {
   background: rgba(0, 111, 207, 0.1);
 }
 
-/* line 242, src/sass/components/_form.scss */
+/* line 251, src/sass/components/_form.scss */
 .input-container select {
   width: 100%;
   -webkit-appearance: none;
@@ -351,7 +361,7 @@ h3 {
   background-size: 20px 20px;
 }
 
-/* line 252, src/sass/components/_form.scss */
+/* line 261, src/sass/components/_form.scss */
 .input-container input[type=date] {
   background: url("../svg/icon-date.svg");
   background-position: right 5px center;
@@ -359,7 +369,7 @@ h3 {
   background-size: 23px 30px;
 }
 
-/* line 258, src/sass/components/_form.scss */
+/* line 267, src/sass/components/_form.scss */
 .input-container input[type=time] {
   background: url("../svg/icon-time.svg");
   background-position: right 3px center;
@@ -367,7 +377,7 @@ h3 {
   background-size: 29px 28px;
 }
 
-/* line 264, src/sass/components/_form.scss */
+/* line 273, src/sass/components/_form.scss */
 .input-container .icon-validation {
   height: 36px;
   width: 36px;
@@ -380,17 +390,17 @@ h3 {
   right: 0;
 }
 
-/* line 274, src/sass/components/_form.scss */
+/* line 283, src/sass/components/_form.scss */
 .input-container .icon-validation.valid {
   background: url("../svg/icon-valid.svg");
 }
 
-/* line 280, src/sass/components/_form.scss */
+/* line 289, src/sass/components/_form.scss */
 .input-container-checkbox {
   margin-bottom: 30px;
 }
 
-/* line 282, src/sass/components/_form.scss */
+/* line 291, src/sass/components/_form.scss */
 .input-container-checkbox input {
   color: #64b5f6;
   width: 20px;
@@ -398,23 +408,23 @@ h3 {
   border: 1px solid blue;
 }
 
-/* line 288, src/sass/components/_form.scss */
+/* line 297, src/sass/components/_form.scss */
 .input-container-checkbox label {
   color: #64b5f6;
 }
 
-/* line 295, src/sass/components/_form.scss */
+/* line 304, src/sass/components/_form.scss */
 .input-return-trip.hidden {
   display: none;
 }
 
 /* Form Tabs */
-/* line 303, src/sass/components/_form.scss */
+/* line 312, src/sass/components/_form.scss */
 #requested-travel-services .form-section-container {
   padding-top: 0;
 }
 
-/* line 308, src/sass/components/_form.scss */
+/* line 317, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,7 +438,7 @@ h3 {
   width: 100%;
 }
 
-/* line 319, src/sass/components/_form.scss */
+/* line 328, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -445,7 +455,7 @@ h3 {
   transition: background .25s ease-in-out;
 }
 
-/* line 331, src/sass/components/_form.scss */
+/* line 340, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li a {
   position: absolute;
   border-bottom: 10px solid rgba(100, 181, 246, 0.3);
@@ -462,7 +472,7 @@ h3 {
   transition: background .25s ease-in-out;
 }
 
-/* line 346, src/sass/components/_form.scss */
+/* line 355, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li span {
   font-size: 16px;
   line-height: 16px;
@@ -473,44 +483,44 @@ h3 {
   z-index: 1;
 }
 
-/* line 355, src/sass/components/_form.scss */
+/* line 364, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li:last-of-type {
   border-right: none;
 }
 
-/* line 358, src/sass/components/_form.scss */
+/* line 367, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active {
   background: #fff;
 }
 
-/* line 361, src/sass/components/_form.scss */
+/* line 370, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active a {
   background-position: center 20px !important;
   border-bottom: 10px solid #64b5f6;
 }
 
-/* line 368, src/sass/components/_form.scss */
+/* line 377, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane {
   display: none;
 }
 
-/* line 370, src/sass/components/_form.scss */
+/* line 379, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane.active {
   display: block;
 }
 
-/* line 374, src/sass/components/_form.scss */
+/* line 383, src/sass/components/_form.scss */
 .form-section-tabs .tab-content {
   padding-bottom: 20px;
 }
 
 /* Form Details Table */
-/* line 406, src/sass/components/_form.scss */
+/* line 415, src/sass/components/_form.scss */
 .details-table {
   padding-bottom: 40px;
 }
 
-/* line 410, src/sass/components/_form.scss */
+/* line 419, src/sass/components/_form.scss */
 .details-table .table-header {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
@@ -518,7 +528,7 @@ h3 {
   color: #90caf9;
 }
 
-/* line 416, src/sass/components/_form.scss */
+/* line 425, src/sass/components/_form.scss */
 .details-table .table-row {
   padding: 10px 10px 7px 10px;
   margin-left: 2vw;
@@ -532,29 +542,29 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 423, src/sass/components/_form.scss */
+/* line 432, src/sass/components/_form.scss */
 .details-table .table-row > div {
   width: 50%;
 }
 
-/* line 426, src/sass/components/_form.scss */
+/* line 435, src/sass/components/_form.scss */
 .details-table .table-row:last-of-type {
   display: none;
 }
 
-/* line 430, src/sass/components/_form.scss */
+/* line 439, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #64b5f6;
 }
 
-/* line 433, src/sass/components/_form.scss */
+/* line 442, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #90caf9;
   text-align: left;
 }
 
 /* Buttons */
-/* line 442, src/sass/components/_form.scss */
+/* line 451, src/sass/components/_form.scss */
 button.next,
 button.next-tab,
 input.button {
@@ -568,12 +578,12 @@ input.button {
   font-weight: 100;
 }
 
-/* line 456, src/sass/components/_form.scss */
+/* line 465, src/sass/components/_form.scss */
 button.next-tab {
   z-index: 1;
 }
 
-/* line 460, src/sass/components/_form.scss */
+/* line 469, src/sass/components/_form.scss */
 button.edit {
   position: absolute;
   bottom: 40px;
