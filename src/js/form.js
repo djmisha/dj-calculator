@@ -143,7 +143,7 @@
 
 		function attachRate() {
 			document.getElementById('theRate').innerHTML = totalRate;
-			document.getElementById('theRange').innerHTML = '$' + lowRate  + ' - ' + '$' + highRate;
+			document.getElementById('theRange').innerHTML = '&darr; ' + lowRate  + '  &nbsp; &nbsp; &nbsp;  ' + '&uarr; ' + highRate;
 		}
 
 		attachRate();

@@ -16,7 +16,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #000;
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
   background-color: #eee !important;
 }
 
@@ -26,7 +26,7 @@ h2,
 h3,
 span,
 p {
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
   margin: 0px;
   padding: 0px;
   font-weight: normal;
@@ -94,11 +94,11 @@ header {
 #theRate {
   color: #000 !important;
   position: absolute;
-  top: 15px;
+  top: 30px;
   right: 15px;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* line 31, src/sass/components/_form.scss */
@@ -109,8 +109,8 @@ header {
 /* line 36, src/sass/components/_form.scss */
 #theRange {
   position: absolute;
-  font-size: 12px;
-  top: 18px;
+  font-size: 13px;
+  top: 40px;
   right: 15px;
   color: #ccc;
   text-align: center;
@@ -178,7 +178,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid white;
+  border: 2px solid white;
   cursor: pointer;
   background-color: #f0f0f0;
 }
@@ -191,21 +191,22 @@ h2 {
 
 /* line 89, src/sass/components/_form.scss */
 .radio__buttons input:checked + label {
-  color: white;
-  background-color: #006FCF;
+  color: #006FCF;
+  font-weight: bold;
+  border: 2px solid #006FCF;
 }
 
-/* line 97, src/sass/components/_form.scss */
+/* line 98, src/sass/components/_form.scss */
 .form-input-row-input {
   width: calc(100% - 100px);
 }
 
-/* line 102, src/sass/components/_form.scss */
+/* line 103, src/sass/components/_form.scss */
 .slidecontainer {
   padding: 15px 0;
 }
 
-/* line 105, src/sass/components/_form.scss */
+/* line 106, src/sass/components/_form.scss */
 .slidecontainer input {
   -webkit-appearance: none;
   /* Override default CSS styles */
@@ -217,31 +218,31 @@ h2 {
   border: 2px solid #fff;
 }
 
-/* line 115, src/sass/components/_form.scss */
+/* line 116, src/sass/components/_form.scss */
 .slidecontainer input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #006FCF;
+  background: #f0f0f0;
   cursor: pointer;
-  border: 2px solid #fff !important;
+  border: 2px solid #006FCF !important;
 }
 
-/* line 125, src/sass/components/_form.scss */
+/* line 126, src/sass/components/_form.scss */
 .slidecontainer input::-moz-range-thumb {
   -webkit-appearance: none;
   /* Override default CSS styles */
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #006FCF;
+  background: #f0f0f0;
   cursor: pointer;
-  border: 2px solid #fff !important;
+  border: 2px solid #006FCF !important;
 }
 
-/* line 136, src/sass/components/_form.scss */
+/* line 137, src/sass/components/_form.scss */
 .input-air-travel-label label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,30 +250,31 @@ h2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 10px;
   margin-top: 5px;
   font-size: 14px;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-/* line 146, src/sass/components/_form.scss */
+/* line 148, src/sass/components/_form.scss */
 #_Attenance_Value:after {
   position: relative;
   content: " People";
 }
 
-/* line 153, src/sass/components/_form.scss */
+/* line 155, src/sass/components/_form.scss */
 #_Hours_Value:after {
   position: relative;
   content: " Hours";
 }
 
-/* line 159, src/sass/components/_form.scss */
+/* line 161, src/sass/components/_form.scss */
 .booking-form {
   font-family: 'OpenSans', sans-serif;
 }
 
-/* line 161, src/sass/components/_form.scss */
+/* line 163, src/sass/components/_form.scss */
 .booking-form input,
 .booking-form textarea,
 .booking-form select,
@@ -282,33 +284,33 @@ h2 {
   line-height: 24px;
 }
 
-/* line 171, src/sass/components/_form.scss */
+/* line 173, src/sass/components/_form.scss */
 .form-section {
   background: #fff;
   width: 100%;
   position: relative;
 }
 
-/* line 209, src/sass/components/_form.scss */
+/* line 211, src/sass/components/_form.scss */
 .form-section-container {
   padding: 40px 20px 140px 20px;
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 209, src/sass/components/_form.scss */
+  /* line 211, src/sass/components/_form.scss */
   .form-section-container {
     padding: 40px 100px 140px 100px;
   }
 }
 
-/* line 216, src/sass/components/_form.scss */
+/* line 218, src/sass/components/_form.scss */
 .form-section-container.active-section {
   height: auto;
   display: block;
 }
 
-/* line 223, src/sass/components/_form.scss */
+/* line 225, src/sass/components/_form.scss */
 .input-container {
   position: relative;
   margin-bottom: 20px;
@@ -316,13 +318,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* line 228, src/sass/components/_form.scss */
+/* line 230, src/sass/components/_form.scss */
 .input-container label {
   display: block;
   color: #000;
 }
 
-/* line 233, src/sass/components/_form.scss */
+/* line 235, src/sass/components/_form.scss */
 .input-container label.required:after {
   content: '*';
   font-size: 25px;
@@ -330,7 +332,7 @@ h2 {
   margin-left: 10px;
 }
 
-/* line 240, src/sass/components/_form.scss */
+/* line 242, src/sass/components/_form.scss */
 .input-container input, .input-container select {
   width: calc(100% - 120px);
   max-width: 430px;
@@ -342,12 +344,12 @@ h2 {
   border-radius: 0;
 }
 
-/* line 250, src/sass/components/_form.scss */
+/* line 252, src/sass/components/_form.scss */
 .input-container input:focus, .input-container select:focus {
   background: #f0f0f0;
 }
 
-/* line 254, src/sass/components/_form.scss */
+/* line 256, src/sass/components/_form.scss */
 .input-container select {
   width: 100%;
   -webkit-appearance: none;
@@ -361,7 +363,7 @@ h2 {
   background-size: 20px 20px;
 }
 
-/* line 264, src/sass/components/_form.scss */
+/* line 266, src/sass/components/_form.scss */
 .input-container input[type=date] {
   background: url("../svg/icon-date.svg");
   background-position: right 5px center;
@@ -369,7 +371,7 @@ h2 {
   background-size: 23px 30px;
 }
 
-/* line 270, src/sass/components/_form.scss */
+/* line 272, src/sass/components/_form.scss */
 .input-container input[type=time] {
   background: url("../svg/icon-time.svg");
   background-position: right 3px center;
@@ -377,7 +379,7 @@ h2 {
   background-size: 29px 28px;
 }
 
-/* line 276, src/sass/components/_form.scss */
+/* line 278, src/sass/components/_form.scss */
 .input-container .icon-validation {
   height: 36px;
   width: 36px;
@@ -390,17 +392,17 @@ h2 {
   right: 0;
 }
 
-/* line 286, src/sass/components/_form.scss */
+/* line 288, src/sass/components/_form.scss */
 .input-container .icon-validation.valid {
   background: url("../svg/icon-valid.svg");
 }
 
-/* line 292, src/sass/components/_form.scss */
+/* line 294, src/sass/components/_form.scss */
 .input-container-checkbox {
   margin-bottom: 30px;
 }
 
-/* line 294, src/sass/components/_form.scss */
+/* line 296, src/sass/components/_form.scss */
 .input-container-checkbox input {
   color: #006FCF;
   width: 20px;
@@ -408,23 +410,23 @@ h2 {
   border: 1px solid blue;
 }
 
-/* line 300, src/sass/components/_form.scss */
+/* line 302, src/sass/components/_form.scss */
 .input-container-checkbox label {
   color: #006FCF;
 }
 
-/* line 307, src/sass/components/_form.scss */
+/* line 309, src/sass/components/_form.scss */
 .input-return-trip.hidden {
   display: none;
 }
 
 /* Form Tabs */
-/* line 315, src/sass/components/_form.scss */
+/* line 317, src/sass/components/_form.scss */
 #requested-travel-services .form-section-container {
   padding-top: 0;
 }
 
-/* line 320, src/sass/components/_form.scss */
+/* line 322, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,7 +440,7 @@ h2 {
   width: 100%;
 }
 
-/* line 331, src/sass/components/_form.scss */
+/* line 333, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -455,7 +457,7 @@ h2 {
   transition: background .25s ease-in-out;
 }
 
-/* line 343, src/sass/components/_form.scss */
+/* line 345, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li a {
   position: absolute;
   border-bottom: 10px solid rgba(0, 111, 207, 0.3);
@@ -472,7 +474,7 @@ h2 {
   transition: background .25s ease-in-out;
 }
 
-/* line 358, src/sass/components/_form.scss */
+/* line 360, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li span {
   font-size: 16px;
   line-height: 16px;
@@ -483,39 +485,39 @@ h2 {
   z-index: 1;
 }
 
-/* line 367, src/sass/components/_form.scss */
+/* line 369, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li:last-of-type {
   border-right: none;
 }
 
-/* line 370, src/sass/components/_form.scss */
+/* line 372, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active {
   background: #fff;
 }
 
-/* line 373, src/sass/components/_form.scss */
+/* line 375, src/sass/components/_form.scss */
 .form-section-tabs ul.tab-choises > li.active a {
   background-position: center 20px !important;
   border-bottom: 10px solid #006FCF;
 }
 
-/* line 380, src/sass/components/_form.scss */
+/* line 382, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane {
   display: none;
 }
 
-/* line 382, src/sass/components/_form.scss */
+/* line 384, src/sass/components/_form.scss */
 .form-section-tabs .tab-pane.active {
   display: block;
 }
 
 /* Form Details Table */
-/* line 418, src/sass/components/_form.scss */
+/* line 420, src/sass/components/_form.scss */
 .details-table {
   padding-bottom: 40px;
 }
 
-/* line 422, src/sass/components/_form.scss */
+/* line 424, src/sass/components/_form.scss */
 .details-table .table-header {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
@@ -523,7 +525,7 @@ h2 {
   color: #000;
 }
 
-/* line 428, src/sass/components/_form.scss */
+/* line 430, src/sass/components/_form.scss */
 .details-table .table-row {
   padding: 10px 10px 7px 10px;
   margin-left: 2vw;
@@ -537,29 +539,29 @@ h2 {
           justify-content: space-between;
 }
 
-/* line 435, src/sass/components/_form.scss */
+/* line 437, src/sass/components/_form.scss */
 .details-table .table-row > div {
   width: 50%;
 }
 
-/* line 438, src/sass/components/_form.scss */
+/* line 440, src/sass/components/_form.scss */
 .details-table .table-row:last-of-type {
   display: none;
 }
 
-/* line 442, src/sass/components/_form.scss */
+/* line 444, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #006FCF;
 }
 
-/* line 445, src/sass/components/_form.scss */
+/* line 447, src/sass/components/_form.scss */
 .details-table .row-value {
   color: #000;
   text-align: left;
 }
 
 /* Buttons */
-/* line 454, src/sass/components/_form.scss */
+/* line 456, src/sass/components/_form.scss */
 button.next,
 button.next-tab,
 input.button {
@@ -573,12 +575,12 @@ input.button {
   font-weight: 100;
 }
 
-/* line 468, src/sass/components/_form.scss */
+/* line 470, src/sass/components/_form.scss */
 button.next-tab {
   z-index: 1;
 }
 
-/* line 472, src/sass/components/_form.scss */
+/* line 474, src/sass/components/_form.scss */
 button.edit {
   position: absolute;
   bottom: 40px;
