@@ -21,11 +21,13 @@ footer,
 
 
 $white: #fff;
-$black: #0C0B68;
+$black: #000;
 
-$blue: #64b5f6;
-$lightBlue: #90caf9;
-$lighterBlue: rgba(0,111,207,0.1);
+$darkGrey: #b0b0b0;
+
+$blue: #006FCF;
+$lightBlue: #000;
+$lighterBlue: #f0f0f0;
 $darkBlue: #2196f3;
 
 $red: #CF0000;
@@ -47,58 +49,4 @@ $ipad: ipads;
 $ipads: ipads;
 
 
-/* Fonts */
-
-$BentonSans: "Benton Sans", sans-serif;
-
-//Benton Sans
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url('../fonts/benton-sans-light/BentonSansLight.eot');
-  src: url('../fonts/benton-sans-light/BentonSansLight.eot') format('embedded-opentype'),
-  url('../fonts/benton-sans-light/BentonSansLight.woff2') format('woff2'),
-  url('../fonts/benton-sans-light/BentonSansLight.woff') format('woff'),
-  url('../fonts/benton-sans-light/BentonSansLight.ttf') format('truetype');
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url('../fonts/benton-sans-book/BentonSansBook.eot');
-  src: url('../fonts/benton-sans-book/BentonSansBook.eot') format('embedded-opentype'),
-  url('../fonts/benton-sans-book/BentonSansBook.woff2') format('woff2'),
-  url('../fonts/benton-sans-book/BentonSansBook.woff') format('woff'),
-  url('../fonts/benton-sans-book/BentonSansBook.ttf') format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url('../fonts/benton-sans-regular/BentonSansRegular.eot');
-  src: url('../fonts/benton-sans-regular/BentonSansRegular.eot') format('embedded-opentype'),
-  url('../fonts/benton-sans-regular/BentonSansRegular.woff2') format('woff2'),
-  url('../fonts/benton-sans-regular/BentonSansRegular.woff') format('woff'),
-  url('../fonts/benton-sans-regular/BentonSansRegular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url('../fonts/benton-sans-medium/BentonSansMedium.eot');
-  src: url('../fonts/benton-sans-medium/BentonSansMedium.eot') format('embedded-opentype'),
-  url('../fonts/benton-sans-medium/BentonSansMedium.woff2') format('woff2'),
-  url('../fonts/benton-sans-medium/BentonSansMedium.woff') format('woff'),
-  url('../fonts/benton-sans-medium/BentonSansMedium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url('../fonts/benton-sans-bold/BentonSansBold.eot');
-  src: url('../fonts/benton-sans-bold/BentonSansBold.eot') format('embedded-opentype'),
-  url('../fonts/benton-sans-bold/BentonSansBold.woff') format('woff'),
-  url('../fonts/benton-sans-bold/BentonSansBold.ttf') format('truetype');
-  font-weight: 700;
-}
 
