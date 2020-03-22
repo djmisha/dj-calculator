@@ -2,9 +2,11 @@
  * @section Form Styles
  */
 
-
-form {
+header,
+.booking-form {
 	background-color: #eee;
+	max-width: 500px;
+	margin: 0 auto;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
 	color: #000;
 	padding: 30px 20px;
 	margin-bottom: 0;
-	border-bottom: 5px solid #eee;
+	border-bottom: 3px solid $darkGrey;
 }
 
 header {
@@ -23,7 +25,7 @@ header {
 #theRate {
 	color: #000 !important;
 	position: absolute;
-	top: 30px;
+	top: 25px;
 	right: 15px;
 	text-align: center;
 	color: white;
@@ -47,15 +49,23 @@ header {
 }
 
 
+.tab-content-event-details {
+	background-color: #FAFAFA !important;
+}
 
 .calc-section {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 3px solid #eee;
+	// padding: 2px 2px;
+	// border-bottom: 1px solid #F5F5F5;
+	margin: 10px 2px;
+	box-shadow: 2px 1px 2px rgba(#eee, 1);
+	padding-bottom: 15px;
 }
 
+
 h2 {
-	background-color: #fff;
+	// background-color: #fff;
 	text-align: left;
 	padding-left: 10px;
 	display: block;
@@ -65,6 +75,7 @@ h2 {
 	line-height: 14px;
 	display: flex;
 	align-items: center;
+	font-weight: 500;
 }
 
 .radio__buttons {
@@ -80,7 +91,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid rgba(#fff, 1);
+        border: 2px solid rgba($lighterBlue, 1);
         cursor: pointer;
 		background-color: $lighterBlue;
     }
@@ -89,8 +100,8 @@ h2 {
         position: absolute;
         opacity: 0;
         &:checked+label{
-            color: $blue;
-            font-weight: bold;
+            color: $white;
+            background: $blue;
 	        border: 2px solid $blue;
         }
     }
@@ -104,7 +115,7 @@ h2 {
 
 .slidecontainer {
 
-	padding: 15px 0;
+	padding: 20px 0;
 	input {
 		-webkit-appearance: none;  /* Override default CSS styles */
 		width: calc(100% - 10px);
@@ -316,9 +327,9 @@ h2 {
 
  /* Form Tabs */
 
- #requested-travel-services .form-section-container {
- 	padding-top: 0;
- }
+ // #requested-travel-services .form-section-container {
+ // 	padding-top: 0;
+ // }
 
  .form-section-tabs {
  	ul.tab-choises {
@@ -420,7 +431,7 @@ h2 {
  /* Form Details Table */
 
  .details-table {
- 	padding-bottom: 40px;
+ 	// padding-bottom: 40px;
  	// max-height: 700px;
  	// overflow: scroll;
  	.table-header {
@@ -452,39 +463,3 @@ h2 {
  	}
  }
 
-
- /* Buttons */
-
- button.next,
- button.next-tab,
- input.button {
- 	color: $white;
- 	background: $darkBlue;
- 	border: none;
- 	padding: 15px 30px;
- 	// border-radius: 6px;
- 	position: absolute;
- 	bottom: 40px;
- 	right: 40px;
- 	font-weight: 100;
- }
-
- button.next-tab {
- 	z-index: 1;
- }
-
- button.edit {
- 	position: absolute;
- 	bottom: 40px;
- 	left: 40px;
- 	color: $lightBlue;
- 	border: 1px solid $lightBlue;
- 	background: transparent;
- 	padding: 15px 20px 15px 50px;
- 	// border-radius: 6px;
- 	font-weight: 100;
- 	background: url('../svg/icon-edit.svg') !important;
- 	background-position: left 15px center !important;
- 	background-repeat: no-repeat !important;
- 	background-size: 22px 22px !important;
- }

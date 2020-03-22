@@ -9,8 +9,9 @@ body {
 	font-size: 14px;
 	line-height: 18px;
 	color: $black;
-	font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
-	background-color: #eee !important;
+	font-family: 'Raleway', sans-serif;
+	// font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
+	background-color: #FAFAFA !important;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -20,7 +21,8 @@ h2,
 h3,
 span,
 p {
-	font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
+	font-family: 'Raleway', sans-serif;
+	// font-family: 'OpenSans', 'Helvetica', Arial, sans-serif;
 	margin: 0px;
 	padding: 0px;
 	font-weight: normal;
@@ -34,7 +36,7 @@ h1 {
 }
 
 h2 {
-	color: #006FCF;
+	// color: #006FCF;
 	// font-weight: 400;
 	font-size: 16px;
 	line-height: 22px;
