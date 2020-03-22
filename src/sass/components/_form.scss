@@ -51,6 +51,7 @@ header {
 .calc-section {
 	display: flex;
 	justify-content: space-between;
+	border-bottom: 3px solid #eee;
 }
 
 h2 {
@@ -74,7 +75,8 @@ h2 {
 	}
     label {
         color: rgba($black, 1);
-        padding: 18px 10px;
+        padding: 14px 10px;
+        margin: 2px 0;
         display: flex;
         justify-content: center;
         align-items: center;
