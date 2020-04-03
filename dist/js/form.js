@@ -26,8 +26,6 @@
 
 
 
-
-
 	// Global Form Variables
 
 	var formFields = document.getElementById('form').elements;
