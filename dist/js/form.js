@@ -80,15 +80,30 @@
 		var WeddingInput = document.getElementById('_Wedding');
 		WeddingInput = WeddingInput.checked;
 
+
+		/*Experience*/
+
+		var DJNovice = document.getElementById('_Novice');
+		DJNovice = DJNovice.checked;
+
+		var DJExpert = document.getElementById('_Expert');
+		DJExpert = DJExpert.checked;
+
+		var DJPro = document.getElementById('_Proffesional');
+		DJPro = DJPro.checked;
+
+
+		/* Sound */
 		var SoundSystemInput = document.getElementById('_SoundSystemYes');
 		SoundSystemInput = SoundSystemInput.checked;
 
+		/*Lighting*/
 		var LightingSystemInput = document.getElementById('_RateTravelPolicy_None');
 		LightingSystemInput = LightingSystemInput.checked;
 
 
 
-		function getRateType() {
+		function getRateType(attenance) {
 			var djRate = 100;
 			if( PrivatePartyInput === true) {
 				djRate = 100;
@@ -105,10 +120,16 @@
 		getRateType();
 
 
-		function getSoundRate() {
+		function getSoundRate(attenance) {
 			var rate;
 			if (SoundSystemInput === true) {
-				rate = 200;
+				if(attenance >= 150) {
+					rate = 350;
+				} 
+				else {
+					rate = 200;
+				}
+				console.log(rate);
 			}
 			else {
 				rate = 0;
@@ -116,10 +137,13 @@
 			return rate;
 		}
 
-		function getLightingRate() {
+		function getLightingRate(attenance) {
 			var rate;
 			if (LightingSystemInput === true) {
-				rate = 200;
+				base = 200;
+				size = (attenance * 0.25);
+				rate = base + size;
+				console.log(rate);
 			}
 			else {
 				rate = 0;
@@ -127,15 +151,13 @@
 			return rate;
 		}
 
-		var soundRate = getSoundRate();
-		var lightingRate = getLightingRate();
+		var soundRate = getSoundRate(attenanceInput);
+		var lightingRate = getLightingRate(attenanceInput);
 		var djRate = getRateType();
 
 		var hours = hoursInput;
-		var people = parseInt(attenanceInput) * 1.5;
 
-
-		var totalRate = djRate * hours + people + soundRate + lightingRate;
+		var totalRate = djRate * hours + soundRate + lightingRate;
 
 		var lowRate = totalRate - 120;
 		var highRate = totalRate + 120;
@@ -144,56 +166,17 @@
 
 		function attachRate() {
 			document.getElementById('theRate').innerHTML = totalRate;
-			document.getElementById('theRange').innerHTML = '&darr; ' + lowRate  + '  &nbsp; &nbsp; &nbsp;  ' + '&uarr; ' + highRate;
+			document.getElementById('hourly').innerHTML = djRate;
+			document.getElementById('sound').innerHTML = soundRate;
+			document.getElementById('lighting').innerHTML = lightingRate;
+
+			// document.getElementById('t<div></div>heRange').innerHTML = '&darr; ' + lowRate  + '  &nbsp; &nbsp; &nbsp;  ' + '&uarr; ' + highRate;
 		}
 
 		attachRate();
 	}
 
 	calculateRate();
-
-
-	// function buildConfirmationTable() {
-	// 	document.getElementById('details-target').innerHTML = '';
-	// 	for(var i = 0; i < formData.length; i++) {
-
-	// 		if(formData[i].type === 'hidden') {
-	// 			var rowTitle = document.createElement('div');
-	// 			rowTitle.classList.add('table-header');
-
-	// 			var titleValue = document.createTextNode(formData[i].value);
-
-	// 			rowTitle.appendChild(titleValue);
-	// 			document.getElementById('details-target').appendChild(rowTitle);
-
-	// 		}
-	// 		else{
-	// 			/*ROW */
-	// 			var row = document.createElement('div');
-	// 			row.classList.add('table-row');
-	// 			/*Description*/
-	// 			var desc = document.createElement('div');
-	// 			desc.classList.add('row-desc');
-
-	// 			/*Value*/
-	// 			var value = document.createElement('div');
-	// 			value.classList.add('row-value');
-
-	// 			var fieldName = document.createTextNode(formData[i].label);
-	// 			var fieldValue = document.createTextNode(formData[i].value);
-
-	// 			desc.appendChild(fieldName);
-	// 			value.appendChild(fieldValue);
-
-	// 			row.appendChild(desc);
-	// 			row.appendChild(value);
-
-	// 			document.getElementById('details-target').appendChild(row);
-	// 		}
-	// 	}
-	// }
-
-	// buildConfirmationTable();
 
 
 	/* Validate Fields and Push to Confirmation */
@@ -225,54 +208,5 @@
 
 
 
-	/* Switch Between Tabs*/
-
-	// function switchBetweenTabs() {
-
-	// 	/*Switch by Clicking Tabs*/
-
-	// 	var tabElement = document.getElementById('nav-tab');
-	// 	tabElement.addEventListener('click', onTabClick, false);
-
-	// 	function onTabClick(event) {
-	// 		event.preventDefault();
-	// 		var activeTabs = document.querySelectorAll('.active');
-
-	// 		activeTabs.forEach(function(tab) {
-	// 			tab.className = tab.className.replace(' active', '');
-	// 		});
-
-	// 		event.target.parentElement.className += ' active';
-	// 		document.getElementById(event.target.href.split('#')[1]).className += ' active';
-	// 	}
-
-	// 	/*Switch via Next Buttons*/
-
-	// 	var nextTabButtons = document.getElementsByClassName('next-tab');
-
-	// 	for( i = 0; i < nextTabButtons.length; i++) {
-	// 		nextTabButtons[i].addEventListener('click', onNextTabButtonClick, false);
-	// 	}
-
-	// 	function onNextTabButtonClick(event) {
-	// 		event.preventDefault();
-
-	// 		var currentTabContent = event.target.parentElement;
-	// 		currentTabContent.className = currentTabContent.className.replace('active', '');
-
-	// 		var activeTab = document.querySelectorAll('li.active');
-
-	// 		activeTab.forEach(function(tab) {
-	// 			tab.className = tab.className.replace('active', '');
-	// 			tab.nextElementSibling.classList.add('active');
-	// 		});
-
-	// 		var nextTabContent = event.target.parentElement.nextElementSibling;
-	// 		nextTabContent.className += ' active';
-
-	// 	}
-	// }
-
-	// switchBetweenTabs();
 
 })();

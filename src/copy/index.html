@@ -6,55 +6,56 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
 	<header>
-		<h1>DJ Cost Estimate</h1>
+		<h1>DJ Services Estimate</h1>
 		<div id="theRate"></div>
 		<div id="theRange"></div>
+
+		<div class="breakdown">
+			<!-- <strong>Estimate Breakdown</strong> -->
+			<div class="hourly">
+				Hourly Rate $<span id="hourly"></span>
+			</div>
+			<div class="sound">
+				Sound System $<span id="sound"></span>
+			</div>
+			<div class="lighting">
+				Lighting System $<span id="lighting"></span>
+			</div>
+		</div>
 	</header>
 
 
-	<section class="booking-form">
-		
+	<section class="calc-form">
 		<form id="form">
-			<div class="form-section" id="requested-travel-services">
+			<div class="form-section">
 				<div class="form-section-tabs">
-			<!-- 	<ul class="tab-choises" id="nav-tab">
-					<li class="tab-icon icon-rail active"><a href="#tab-content-event-details"></a><span><b>1</b> Details</span></li>
-					<li class="tab-icon icon-bus"><a href="#tab-content-dj-rate"></a><span><b>2</b> Review</span></li>
-					<li class="tab-icon icon-insurance"><a href="#tab-content-hire"></a><span>3. Book</span></li>
-				</ul> -->
 				<div class="tab-content">
-					<div class="tab-pane form-area active" id="tab-content-event-details">
+					<div class="tab-pane form-area active">
 						<input type="hidden" value="Event Details">
-
 						<div class="calc-section">
-							
 							<h2>Type of Event</h2>
 							<div class="radio__buttons">
-
 								<div class="policy__button">
-									<input type="radio" id="_Private_Party" name="_EventType" value="Private" data-error="#_RateTravelPolicy_Err" data-name="Private" checked>
+									<input type="radio" id="_Private_Party" name="_EventType" value="Private" data-name="Private" checked>
 									<label for="_Private_Party" name="Private">Private</label>
 								</div>
 								<div class="policy__button">
-
-									<input type="radio" id="_Corporate" name="_EventType" value="Corporate" data-error="#_RateTravelPolicy_Err" data-name="Corporate">
+									<input type="radio" id="_Corporate" name="_EventType" value="Corporate" data-name="Corporate">
 									<label for="_Corporate" name="Corporate">Corporate</label>
 								</div>
 								<div class="policy__button">
-									<input type="radio" id="_Wedding" name="_EventType" value="Wedding" data-error="#_RateTravelPolicy_Err" data-name="Wedding">
+									<input type="radio" id="_Wedding" name="_EventType" value="Wedding" data-name="Wedding">
 									<label for="_Wedding" name="Wedding">Wedding</label>
 								</div>
 							</div>
 						</div>
 						<div class="calc-section">
-
 							<h2>Guest count?</h2>
-
 							<div class="form-input-row-input input-air-travel">
 								<div class="input-air-travel-label">
 									<label for="_Attenance">
@@ -68,7 +69,6 @@
 						</div>
 						<div class="calc-section">
 							<h2>Duration?</h2>
-
 							<div class="form-input-row-input input-air-travel">
 								<div class="input-air-travel-label">
 									<label for="_Hours">
@@ -82,70 +82,49 @@
 						</div>
 						<div class="calc-section">
 							<h2>Sound system?</h2> 
-
 							<div class="radio__buttons">
 								<div class="policy__button">
-									<input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes" data-error="#_RateTravelPolicy_Err" data-name="Sound">
+									<input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes" data-name="Sound">
 									<label for="_SoundSystemYes">Yes</label>
 								</div>
 								<div class="policy__button">
 
-									<input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-error="#_RateTravelPolicy_Err" data-name="Sound">
+									<input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-name="Sound">
 									<label for="_SoundSystemNo">No</label>
 								</div>
 							</div>
 						</div>
 						<div class="calc-section">
 							<h2>Dance Lighting?</h2>
-
 							<div class="radio__buttons">
 								<div class="policy__button">
-									<input type="radio" id="_RateTravelPolicy_None" name="_LightingSystem" value="Yes, Lighting" data-error="#_RateTravelPolicy_Err" data-name="Lighting">
+									<input type="radio" id="_RateTravelPolicy_None" name="_LightingSystem" value="Yes, Lighting" data-name="Lighting">
 									<label for="_RateTravelPolicy_None">Yes</label>
 								</div>
 								<div class="policy__button">
-									<input type="radio" id="_RateTravelPolicy_Moderate" name="_LightingSystem" value="No" data-error="#_RateTravelPolicy_Err" data-name="Lighting">
+									<input type="radio" id="_RateTravelPolicy_Moderate" name="_LightingSystem" value="No" data-name="Lighting">
 									<label for="_RateTravelPolicy_Moderate">No</label>
 								</div>
 							</div>
 						</div>
-
-
-
-						<!-- <button class="next-tab">Next</button> -->
-
-					</div>
-
-					<!-- <div class="tab-pane form-area" id="tab-content-dj-rate">
-							<div class="details-table" id="details-target">
-								<div class="table-header">Travel Details</div>
+						<div class="calc-section">
+							<h2>DJ Exprience</h2>
+							<div class="radio__buttons">
+								<div class="policy__button">
+									<input type="radio" id="_Novice" name="_DJExperience" value="Novice" data-name="Novice" checked>
+									<label for="_Novice" name="Novice">Novice</label>
+								</div>
+								<div class="policy__button">
+									<input type="radio" id="_Expert" name="_DJExperience" value="Expert" data-name="Expert">
+									<label for="_Expert" name="Expert">Expert</label>
+								</div>
+								<div class="policy__button">
+									<input type="radio" id="_Proffesional" name="_DJExperience" value="Proffesional" data-name="Proffesional">
+									<label for="_Proffesional" name="Proffesional">Proffesional</label>
+								</div>
 							</div>
-						<button class="edit" id="edit-details">Change</button>
-						<button class="next-tab">Next</button>
+						</div>
 					</div>
-
-					<div class="tab-pane form-area" id="tab-content-hire">
-						<p>Please fill out your contact information to book at DJ. Our team will reach out to your shorly. </p>
-
-						<div class="input-container">
-							<label for="travelerName">Your Name</label>
-							<input type="text" name="travelerName" data-name="Name">
-							<div class="icon-validation"></div>
-						</div>
-
-						<div class="input-container">
-							<label for="travelerEmail">Email Address</label>
-							<input type="email" name="travelerEmail" data-name="Email">
-							<div class="icon-validation"></div>
-						</div>
-
-						<div class="input-container">
-							<label for="phoneNumber">Phone Number</label>
-							<input type="tel" name="phoneNumber" data-name="Phone Number">
-							<div class="icon-validation"></div>
-						</div>
-						<input type="submit" class="button" value="Send" data-name="">
-					</div> -->
 				</div>
 			</div>	
 		</form>
