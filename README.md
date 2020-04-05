@@ -4,8 +4,8 @@ Calculate a DJ rate for your event.
 
 *To do*
 
-- clean up styling
 
 Completed
 
+- clean up styling
 - make calculations work

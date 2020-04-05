@@ -100,22 +100,36 @@
 		LightingSystemInput = LightingSystemInput.checked;
 
 
-
-		function getRateType(attenance) {
-			var djRate = 100;
-			if( PrivatePartyInput === true) {
-				djRate = 100;
+		function getDJrate(cost) {
+			var rate = cost;
+			if (DJNovice === true) {
+				rate = rate / 1.30;
 			}
-			if( CorporateInput === true) {
-				djRate = 200;
+			if (DJExpert === true) {
+				rate = cost;
 			}
-			if( WeddingInput === true) {
-				djRate = 250;
+			if (DJPro === true) {
+				rate = cost + (cost * 0.30);
 			}
-			return djRate;
+			return rate;
 		}
 
-		getRateType();
+
+		function getPartyRate(attenance) {
+			var rate = 100;
+			if( PrivatePartyInput === true) {
+				rate = 100;
+			}
+			if( CorporateInput === true) {
+				rate = 200;
+			}
+			if( WeddingInput === true) {
+				rate = 225;
+			}
+			return rate;
+		}
+
+		getPartyRate();
 
 
 		function getSoundRate(attenance) {
@@ -127,7 +141,7 @@
 				else {
 					rate = 200;
 				}
-				console.log(rate);
+				// console.log(rate);
 			}
 			else {
 				rate = 0;
@@ -139,9 +153,9 @@
 			var rate;
 			if (LightingSystemInput === true) {
 				base = 200;
-				size = (attenance * 0.25);
+				size = (attenance * 0.35);
 				rate = base + size;
-				console.log(rate);
+				// console.log(rate);
 			}
 			else {
 				rate = 0;
@@ -151,22 +165,23 @@
 
 		var soundRate = getSoundRate(attenanceInput);
 		var lightingRate = getLightingRate(attenanceInput);
-		var djRate = getRateType();
+		var partyRate = getPartyRate();
+		var djRate = getDJrate(partyRate);
+
+		// console.log(djRate);
 
 		var hours = hoursInput;
 
-		var totalRate = djRate * hours + soundRate + lightingRate;
+		var totalRate = Math.floor((djRate * hours) + (soundRate + lightingRate));
 
-		var lowRate = totalRate - 120;
-		var highRate = totalRate + 120;
 
 		// console.log(totalRate);
 
 		function attachRate() {
 			document.getElementById('theRate').innerHTML = totalRate;
-			document.getElementById('hourly').innerHTML = djRate;
-			document.getElementById('sound').innerHTML = soundRate;
-			document.getElementById('lighting').innerHTML = lightingRate;
+			document.getElementById('hourly').innerHTML = Math.floor(djRate);
+			document.getElementById('sound').innerHTML = Math.floor(soundRate);
+			document.getElementById('lighting').innerHTML = Math.floor(lightingRate);
 
 			// document.getElementById('t<div></div>heRange').innerHTML = '&darr; ' + lowRate  + '  &nbsp; &nbsp; &nbsp;  ' + '&uarr; ' + highRate;
 		}

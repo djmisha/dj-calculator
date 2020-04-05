@@ -3,46 +3,49 @@
  */
 
  header {
- 	padding: 30px 20px;
+ 	padding: 30px 20px 10px 20px;
  	position: relative;
  }
 
- 	h1 {
- 		display: block;
- 		background: $white;
- 		color: #000;
- 		margin-bottom: 0;
- 		position: relative;
- 		top: -10px;
- 		border-bottom: 3px solid $darkGrey;
+ h1 {
+ 	display: block;
+ 	background: $white;
+ 	color: #000;
+ 	margin-bottom: 0;
+ 	position: relative;
+ 	top: -10px;
+ 	border-bottom: 3px solid $darkGrey;
+ }
+
+ #theRate {
+ 	color: #000 !important;
+ 	position: absolute;
+ 	top: 25px;
+ 	right: 15px;
+ 	text-align: center;
+ 	color: white;
+ 	font-size: 40px;
+ 	&:before {
+ 		content: '$';
  	}
+ }
 
- 	#theRate {
- 		color: #000 !important;
- 		position: absolute;
- 		top: 25px;
- 		right: 15px;
- 		text-align: center;
- 		color: white;
- 		font-size: 40px;
- 		&:before {
- 			content: '$';
- 		}
+ #theRange {
+ 	position: absolute;
+ 	font-size: 13px;
+ 	top: 40px;
+ 	right: 15px;
+ 	color: #ccc;
+ 	text-align: center;
+ 	padding-top: 20px;
+ 	&:before {
+ 		content: '';
  	}
+ }	
 
- 	#theRange {
- 		position: absolute;
- 		font-size: 13px;
- 		top: 40px;
- 		right: 15px;
- 		color: #ccc;
- 		text-align: center;
- 		padding-top: 20px;
- 		&:before {
- 			content: '';
- 		}
- 	}	
-
+.breakdown > div {
+	// border-bottom: 1px solid #ccc;
+}
 
  .calc-section {
  	display: flex;
@@ -96,9 +99,9 @@
  }
 
 
-.form-input-row-input {
-	width: calc(100% - 100px);
-}
+ .form-input-row-input {
+ 	width: calc(100% - 100px);
+ }
 
  .slidecontainer {
 
