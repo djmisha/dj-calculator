@@ -24,8 +24,6 @@
 	};
 	
 
-
-
 	// Global Form Variables
 
 	var formFields = document.getElementById('form').elements;
@@ -135,13 +133,12 @@
 		function getSoundRate(attenance) {
 			var rate;
 			if (SoundSystemInput === true) {
-				if(attenance >= 150) {
-					rate = 350;
-				} 
-				else {
-					rate = 200;
-				}
-				// console.log(rate);
+				rate = 100;
+				if(attenance >= 75) {rate = 125; }
+				if(attenance >= 100) {rate = 150; }
+				if(attenance >= 150) {rate = 200; }
+				if(attenance >= 200) {rate = 300; }
+				if(attenance >= 250) {rate = 400; }
 			}
 			else {
 				rate = 0;
