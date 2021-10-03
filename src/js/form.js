@@ -118,10 +118,10 @@
 				rate = 150;
 			}
 			if( CorporateInput === true) {
-				rate = 350;
+				rate = 300;
 			}
 			if( WeddingInput === true) {
-				rate = 300;
+				rate = 250;
 			}
 			return rate;
 		}
