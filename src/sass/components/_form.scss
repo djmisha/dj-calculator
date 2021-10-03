@@ -2,191 +2,223 @@
  * @section Form Styles
  */
 
- header {
- 	padding: 30px 20px 10px 20px;
- 	position: relative;
- }
-
- h1 {
- 	display: block;
- 	background: $white;
- 	color: #000;
- 	margin-bottom: 0;
- 	position: relative;
- 	top: -10px;
- 	border-bottom: 3px solid $darkGrey;
- }
-
- #theRate {
- 	color: #000 !important;
- 	position: absolute;
- 	top: 25px;
- 	right: 15px;
- 	text-align: center;
- 	color: white;
- 	font-size: 40px;
- 	&:before {
- 		content: '$';
- 	}
- }
-
- #theRange {
- 	position: absolute;
- 	font-size: 13px;
- 	top: 40px;
- 	right: 15px;
- 	color: #ccc;
- 	text-align: center;
- 	padding-top: 20px;
- 	&:before {
- 		content: '';
- 	}
- }	
-
-.breakdown > div {
-	// border-bottom: 1px solid #ccc;
+header {
+  padding: 30px 20px 10px 20px;
+  position: relative;
 }
 
- .calc-section {
- 	display: flex;
- 	justify-content: space-between;
- 	margin: 10px 2px;
- 	box-shadow: 2px 1px 2px rgba(#eee, 1);
- 	padding-bottom: 15px;
- }
+h1 {
+  display: block;
+  background: $white;
+  color: #000;
+  margin-bottom: 0;
+  position: relative;
+  top: -10px;
+  border-bottom: 3px solid $darkGrey;
+}
 
+#theRate {
+  color: #000 !important;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  &:before {
+    content: "$";
+  }
+}
 
- h2 {
- 	text-align: left;
- 	padding-left: 10px;
- 	display: block;
- 	width: 100px;
- 	padding-right: 5px;
- 	font-size: 12px;
- 	line-height: 14px;
- 	display: flex;
- 	align-items: center;
- 	font-weight: 600;
- }
+#theRange {
+  position: absolute;
+  font-size: 13px;
+  top: 40px;
+  right: 15px;
+  color: #ccc;
+  text-align: center;
+  padding-top: 20px;
+  &:before {
+    content: "";
+  }
+}
 
- .radio__buttons {
- 	width: calc(100% - 100px);
- 	display: flex;
- 	> div {
- 		flex: 1;
- 	}
- 	label {
- 		color: rgba($black, 1);
- 		padding: 14px 10px;
- 		margin: 2px 0;
- 		display: flex;
- 		justify-content: center;
- 		align-items: center;
- 		border: 2px solid rgba($lighterBlue, 1);
- 		cursor: pointer;
- 		background-color: $lighterBlue;
- 	}
+.breakdown > div {
+  // border-bottom: 1px solid #ccc;
+}
 
- 	input {
- 		position: absolute;
- 		opacity: 0;
- 		&:checked+label{
- 			color: $white;
- 			background: $blue;
- 			border: 2px solid $blue;
- 		}
- 	}
- }
+.calc-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 2px;
+  box-shadow: 2px 1px 2px rgba(#eee, 1);
+  padding-bottom: 15px;
+}
 
+h2 {
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+  width: 100px;
+  padding-right: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
 
- .form-input-row-input {
- 	width: calc(100% - 100px);
- }
+.radio__buttons {
+  width: calc(100% - 100px);
+  display: flex;
+  > div {
+    flex: 1;
+  }
+  label {
+    color: rgba($black, 1);
+    padding: 14px 10px;
+    margin: 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba($lighterBlue, 1);
+    cursor: pointer;
+    background-color: $lighterBlue;
+  }
 
- .slidecontainer {
+  input {
+    position: absolute;
+    opacity: 0;
+    &:checked + label {
+      color: $white;
+      background: $blue;
+      border: 2px solid $blue;
+    }
+  }
+}
 
- 	padding: 20px 0;
- 	input {
- 		-webkit-appearance: none;  /* Override default CSS styles */
- 		width: calc(100% - 10px);
- 		height: 10px;
- 		border-radius: 5px;  
- 		background: $lighterBlue;
- 		outline: none;
- 		border: 2px solid #fff;
+.text_input {
+  width: calc(100% - 100px);
+  input {
+    border: 1px solid $blue;
+    width: 90%;
+    padding: 8px 12px;
+    &:checked + label {
+      color: $white;
+      background: $blue;
+    }
+  }
+}
 
- 	}
- 	input::-webkit-slider-thumb {
- 		-webkit-appearance: none;
- 		appearance: none;
- 		width: 38px;
- 		height: 38px;
- 		border-radius: 50%; 
- 		background: $lighterBlue;
- 		cursor: pointer;
- 		border: 2px solid $blue !important;
- 	}
- 	input::-moz-range-thumb {
- 		-webkit-appearance: none;  /* Override default CSS styles */
- 		width: 38px;
- 		height: 38px;
- 		border-radius: 50%;
- 		background: $lighterBlue;
- 		cursor: pointer;
- 		border: 2px solid $blue !important;
- 	}
- }
+.submit_buttons {
+  display: block;
+  width: 100%;
+  input {
+    color: rgba($white, 1);
+    width: 100%;
+    padding: 14px 10px;
+    margin: 2px 0;
+    text-transform: uppercase;
+    border: 2px solid rgba($blue, 1);
+    cursor: pointer;
+    background-color: $blue;
+  }
+}
 
- .input-air-travel-label label {
- 	display: flex;
- 	justify-content: flex-end;
- 	margin-top: 5px;
- 	font-size: 14px;
- 	margin-right: 20px;
- 	margin-top: 10px;
- 	margin-bottom: 0px;
- }
+.form-input-row-input {
+  width: calc(100% - 100px);
+}
 
- #_Attenance_Value {
- 	&:after {
- 		position: relative;
- 		content: " People";
- 	}
- }
+.slidecontainer {
+  padding: 20px 0;
+  input {
+    -webkit-appearance: none; /* Override default CSS styles */
+    width: calc(100% - 10px);
+    height: 10px;
+    border-radius: 5px;
+    background: $lighterBlue;
+    outline: none;
+    border: 2px solid #fff;
+  }
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: $lighterBlue;
+    cursor: pointer;
+    border: 2px solid $blue !important;
+  }
+  input::-moz-range-thumb {
+    -webkit-appearance: none; /* Override default CSS styles */
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: $lighterBlue;
+    cursor: pointer;
+    border: 2px solid $blue !important;
+  }
+}
 
- #_Hours_Value {
- 	&:after {
- 		position: relative;
- 		content: " Hours";
- 	}
- }
+.input-air-travel-label label {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
 
- .booking-form {
- 	font-family: 'OpenSans', sans-serif;
- 	input,
- 	textarea,
- 	select,
- 	button {
- 		font-family: 'OpenSans', sans-serif;
- 		font-size: 20px;
- 		line-height: 24px;
- 	}
- }
+#_Attenance_Value {
+  &:after {
+    position: relative;
+    content: " People";
+  }
+}
 
- .form-section {
- 	background: $white;
- 	width: 100%;
- 	position: relative;
- 	&-container {
- 		padding: 40px 20px 140px 20px;
- 		display: none;
+#_Hours_Value {
+  &:after {
+    position: relative;
+    content: " Hours";
+  }
+}
 
- 		@include media($tablet) {
- 			padding: 40px 100px 140px 100px;
- 		}
- 		&.active-section {
- 			height: auto;
- 			display: block;
- 		}
- 	}
- }
+.booking-form {
+  font-family: "OpenSans", sans-serif;
+  input,
+  textarea,
+  select,
+  button {
+    font-family: "OpenSans", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.form-section {
+  background: $white;
+  width: 100%;
+  position: relative;
+  &-container {
+    padding: 40px 20px 140px 20px;
+    display: none;
+
+    @include media($tablet) {
+      padding: 40px 100px 140px 100px;
+    }
+    &.active-section {
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+.message {
+  padding: 20px 10px;
+  div {
+    // display: inline;
+    font-weight: bold;
+  }
+}

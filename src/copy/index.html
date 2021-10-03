@@ -1,136 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DJ Average Hourly Rate Cost Estimate Calculator</title>
-	<meta name="viewport" content="maximum-scale=5.0, user-scalable=yes, width=device-width">
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet"> 
+  <title>DJ Average Hourly Rate Cost Estimate Quote</title>
+  <meta name="viewport" content="maximum-scale=5.0, user-scalable=yes, width=device-width">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet"> 
 </head>
 <body>
+  
+  <section class="calc-form">
+    <form id="form" data-netlify="true" name="DJ Services Quote" method="POST">
+      <div class="form-section">
+        <div class="form-section-tabs">
+          <div class="tab-content">
+            <div class="tab-pane form-area active">
+              <input type="hidden" value="Event Details">
+              <div class="calc-section">
+                <h2>Type of Event</h2>
+                <div class="radio__buttons">
+                  <div class="policy__button">
+                    <input type="radio" id="_Private_Party" name="_EventType" value="Private" data-name="Private" checked>
+                    <label for="_Private_Party" name="Private">Private</label>
+                  </div>
+                  <div class="policy__button">
+                    <input type="radio" id="_Corporate" name="_EventType" value="Corporate" data-name="Corporate">
+                    <label for="_Corporate" name="Corporate">Corporate</label>
+                  </div>
+                  <div class="policy__button">
+                    <input type="radio" id="_Wedding" name="_EventType" value="Wedding" data-name="Wedding">
+                    <label for="_Wedding" name="Wedding">Wedding</label>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-section">
+                <h2>Guest count?</h2>
+                <div class="form-input-row-input input-air-travel">
+                  <div class="input-air-travel-label">
+                    <label for="_Attenance">
+                      <div id="_Attenance_Value"></div>
+                    </label>
+                  </div>
+                  <div class="slidecontainer">
+                    <input type="range" min="25" max="300" value="75" class="range-slider" id="_Attenance" name="_Attenance" data-name="Attenance">
+                  </div>
+                </div>
+              </div>
+              <div class="calc-section">
+                <h2>Duration?</h2>
+                <div class="form-input-row-input input-air-travel">
+                  <div class="input-air-travel-label">
+                    <label for="_Hours">
+                      <div id="_Hours_Value"></div>
+                    </label>
+                  </div>
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="8" value="3" class="range-slider" id="_Hours" name="_Hours" data-name="DJ Hours">
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="calc-section">
+                <h2>Sound system?</h2> 
+                <div class="radio__buttons">
+                  <div class="policy__button">
+                    <input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes" data-name="Sound">
+                    <label for="_SoundSystemYes">Yes</label>
+                  </div>
+                  <div class="policy__button">
+                    
+                    <input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-name="Sound">
+                    <label for="_SoundSystemNo">No</label>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="calc-section">
+                <h2>Dance Lighting?</h2>
+                <div class="radio__buttons">
+                  <div class="policy__button">
+                    <input type="radio" id="_RateTravelPolicy_None" name="_LightingSystem" value="Yes, Lighting" data-name="Lighting">
+                    <label for="_RateTravelPolicy_None">Yes</label>
+                  </div>
+                  <div class="policy__button">
+                    <input type="radio" id="_RateTravelPolicy_Moderate" name="_LightingSystem" value="No" data-name="Lighting">
+                    <label for="_RateTravelPolicy_Moderate">No</label>
+                  </div>
+                </div>
+              </div> -->
+              <div class="calc-section">
+                <h2>Vibe and Feel</h2>
+                <div class="radio__buttons">
+                  <div class="policy__button">
+                    <input type="radio" id="_Classy" name="_DJExperience" value="Classy" data-name="Classy">
+                    <label for="_Classy" name="Classy">Classy</label>
+                  </div>
+                  <div class="policy__button" >
+                    <input type="radio" id="_Upbeat" name="_DJExperience" value="Upbeat" data-name="Upbeat" checked>
+                    <label for="_Upbeat" name="Upbeat">Upbeat</label>
+                  </div>
+                  <div class="policy__button">
+                    <input type="radio" id="_Rager" name="_DJExperience" value="Rager" data-name="Rager">
+                    <label for="_Rager" name="Rager">Rager</label>
+                  </div>
+                </div>
+              </div>
 
-	<header>
-		<h1>DJ Services Estimate</h1>
-		<div id="theRate"></div>
-		<div id="theRange"></div>
+              <div class="message">
+                <!-- Hey!
+                Looks like you're planning to have a <div class="vibe"></div> <div class="event-type"></div> with about 
+                <div class="guest-count"></div> for <div class="duration"></div> hours.
+                <br><br>
+                That's great!  We would love the provide the music. 
+                <br><br>
+                Your Estimate is approximatley <div class="estimate"> -->
+                  <header>
+                    <h1>DJ Services Quote</h1>
+                    <div id="theRate"></div>
+                    <div id="theRange"></div>
+                    
+                    <div class="breakdown">
+                      <!-- <strong>Estimate Breakdown</strong> -->
+                      <div class="hourly">
+                        DJ Hourly Rate ~ $<span id="hourly"></span>
+                      </div>
+                      <div class="sound">
+                        Sound System ~ $<span id="sound"></span>
+                      </div>
+                      <!-- <div class="lighting">
+                        Lighting System ~ $<span id="lighting"></span>
+                      </div> -->
+                    </div>
+                    <br>
+                    Complete the form now to recieve a reply with DJ availability! 
+                  </header>
+                </div>  
+              </div>
 
-		<div class="breakdown">
-			<!-- <strong>Estimate Breakdown</strong> -->
-			<div class="hourly">
-				DJ Hourly Rate ~ $<span id="hourly"></span>
-			</div>
-			<div class="sound">
-				Sound System ~ $<span id="sound"></span>
-			</div>
-			<div class="lighting">
-				Lighting System ~ $<span id="lighting"></span>
-			</div>
-		</div>
-	</header>
+              <div class="calc-section">
+                <h2>Your Name</h2>
+                <div class="text_input">
+                  <!-- <label for="_Classy" name="Classy">Classy</label> -->
+                  <input type="text" id="_Name" name="_Name" value="" data-name="Name">
+                  
+                </div>
+              </div>
+              <div class="calc-section">
+                <h2>Phone Number</h2>
+                <div class="text_input">
+                  <!-- <label for="_Classy" name="Classy">Classy</label> -->
+                  <input type="text" id="_Name" name="_Name" value="" data-name="Name">
+                </div>
+              </div>
+              <div class="calc-section">
+                <h2>Email</h2>
+                <div class="text_input">
+                  <!-- <label for="_Classy" name="Classy">Classy</label> -->
+                  <input type="text" id="_Name" name="_Name" value="" data-name="Name">
+                </div>
+              </div>
 
-
-	<section class="calc-form">
-		<form id="form">
-			<div class="form-section">
-				<div class="form-section-tabs">
-				<div class="tab-content">
-					<div class="tab-pane form-area active">
-						<input type="hidden" value="Event Details">
-						<div class="calc-section">
-							<h2>Type of Event</h2>
-							<div class="radio__buttons">
-								<div class="policy__button">
-									<input type="radio" id="_Private_Party" name="_EventType" value="Private" data-name="Private" checked>
-									<label for="_Private_Party" name="Private">Private</label>
-								</div>
-								<div class="policy__button">
-									<input type="radio" id="_Corporate" name="_EventType" value="Corporate" data-name="Corporate">
-									<label for="_Corporate" name="Corporate">Corporate</label>
-								</div>
-								<div class="policy__button">
-									<input type="radio" id="_Wedding" name="_EventType" value="Wedding" data-name="Wedding">
-									<label for="_Wedding" name="Wedding">Wedding</label>
-								</div>
-							</div>
-						</div>
-						<div class="calc-section">
-							<h2>Guest count?</h2>
-							<div class="form-input-row-input input-air-travel">
-								<div class="input-air-travel-label">
-									<label for="_Attenance">
-										<div id="_Attenance_Value"></div>
-									</label>
-								</div>
-								<div class="slidecontainer">
-									<input type="range" min="25" max="300" value="75" class="range-slider" id="_Attenance" name="_Attenance" data-name="Attenance">
-								</div>
-							</div>
-						</div>
-						<div class="calc-section">
-							<h2>Duration?</h2>
-							<div class="form-input-row-input input-air-travel">
-								<div class="input-air-travel-label">
-									<label for="_Hours">
-										<div id="_Hours_Value"></div>
-									</label>
-								</div>
-								<div class="slidecontainer">
-									<input type="range" min="1" max="8" value="3" class="range-slider" id="_Hours" name="_Hours" data-name="DJ Hours">
-								</div>
-							</div>
-						</div>
-						<div class="calc-section">
-							<h2>Sound system?</h2> 
-							<div class="radio__buttons">
-								<div class="policy__button">
-									<input type="radio" id="_SoundSystemYes" name="_SoundSystem" value="Yes" data-name="Sound">
-									<label for="_SoundSystemYes">Yes</label>
-								</div>
-								<div class="policy__button">
-
-									<input type="radio" id="_SoundSystemNo" name="_SoundSystem" value="No, I have a sound system." data-name="Sound">
-									<label for="_SoundSystemNo">No</label>
-								</div>
-							</div>
-						</div>
-						<div class="calc-section">
-							<h2>Dance Lighting?</h2>
-							<div class="radio__buttons">
-								<div class="policy__button">
-									<input type="radio" id="_RateTravelPolicy_None" name="_LightingSystem" value="Yes, Lighting" data-name="Lighting">
-									<label for="_RateTravelPolicy_None">Yes</label>
-								</div>
-								<div class="policy__button">
-									<input type="radio" id="_RateTravelPolicy_Moderate" name="_LightingSystem" value="No" data-name="Lighting">
-									<label for="_RateTravelPolicy_Moderate">No</label>
-								</div>
-							</div>
-						</div>
-						<div class="calc-section">
-							<h2>DJ Exprience</h2>
-							<div class="radio__buttons">
-								<div class="policy__button">
-									<input type="radio" id="_Novice" name="_DJExperience" value="Novice" data-name="Novice">
-									<label for="_Novice" name="Novice">Novice</label>
-								</div>
-								<div class="policy__button" >
-									<input type="radio" id="_Expert" name="_DJExperience" value="Expert" data-name="Expert" checked>
-									<label for="_Expert" name="Expert">Expert</label>
-								</div>
-								<div class="policy__button">
-									<input type="radio" id="_Proffesional" name="_DJExperience" value="Proffesional" data-name="Proffesional">
-									<label for="_Proffesional" name="Proffesional">Proffesional</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</form>
-	</section>
-
-<!-- Scripts -->
-<script src="js/form.js"></script>
-
-</body>
+              
+              <div class="calc-section">
+                <div class="submit_buttons">
+                  <!-- <div class="policy__button"> -->
+                    <!-- <label for="_Classy" name="Classy">Classy</label> -->
+                    <input type="submit" id="_Submit" name="_Submit" value="Send Request">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>	
+      </form>
+    </section>
+    
+    
+    
+    
+    
+    
+    <!-- <div class="calc-section">
+      <input type="text" id="date-of-event">
+      <input type="text" id="name">
+      <input type="text" id="email">
+      <input type="text" id="phone">
+    </div>
+    
+    <button>Send</button> -->
+    
+    
+    <!-- Scripts -->
+    <script src="js/form.js"></script>
+    
+  </body>
+  

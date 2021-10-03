@@ -78,50 +78,50 @@
 
 		/*Experience*/
 
-		var DJNovice = document.getElementById('_Novice');
-		DJNovice = DJNovice.checked;
+		// var DJNovice = document.getElementById('_Novice');
+		// DJNovice = DJNovice.checked;
 
-		var DJExpert = document.getElementById('_Expert');
-		DJExpert = DJExpert.checked;
+		// var DJExpert = document.getElementById('_Expert');
+		// DJExpert = DJExpert.checked;
 
-		var DJPro = document.getElementById('_Proffesional');
-		DJPro = DJPro.checked;
+		// var DJPro = document.getElementById('_Proffesional');
+		// DJPro = DJPro.checked;
 
 
 		/* Sound */
-		var SoundSystemInput = document.getElementById('_SoundSystemYes');
-		SoundSystemInput = SoundSystemInput.checked;
+		// var SoundSystemInput = document.getElementById('_SoundSystemYes');
+		// SoundSystemInput = SoundSystemInput.checked;
 
 		/*Lighting*/
-		var LightingSystemInput = document.getElementById('_RateTravelPolicy_None');
-		LightingSystemInput = LightingSystemInput.checked;
+		// var LightingSystemInput = document.getElementById('_RateTravelPolicy_None');
+		// LightingSystemInput = LightingSystemInput.checked;
 
 
 		function getDJrate(cost) {
 			var rate = cost;
-			if (DJNovice === true) {
-				rate = rate / 1.30;
-			}
-			if (DJExpert === true) {
-				rate = cost;
-			}
-			if (DJPro === true) {
-				rate = cost + (cost * 0.30);
-			}
+			// if (DJNovice === true) {
+			// 	rate = rate / 1.30;
+			// }
+			// if (DJExpert === true) {
+			// 	rate = cost;
+			// }
+			// if (DJPro === true) {
+			// 	rate = cost + (cost * 0.30);
+			// }
 			return rate;
 		}
 
 
 		function getPartyRate(attenance) {
-			var rate = 100;
+			var rate = 150;
 			if( PrivatePartyInput === true) {
-				rate = 100;
+				rate = 150;
 			}
 			if( CorporateInput === true) {
-				rate = 200;
+				rate = 350;
 			}
 			if( WeddingInput === true) {
-				rate = 225;
+				rate = 300;
 			}
 			return rate;
 		}
@@ -131,17 +131,17 @@
 
 		function getSoundRate(attenance) {
 			var rate;
-			if (SoundSystemInput === true) {
-				rate = 100;
-				if(attenance >= 75) {rate = 125; }
-				if(attenance >= 100) {rate = 150; }
-				if(attenance >= 150) {rate = 200; }
-				if(attenance >= 200) {rate = 300; }
-				if(attenance >= 250) {rate = 400; }
-			}
-			else {
-				rate = 0;
-			}
+			// if (SoundSystemInput === true) {
+				rate = 150;
+				if(attenance >= 50) {rate = 200; }
+				if(attenance >= 100) {rate = 250; }
+				if(attenance >= 150) {rate = 300; }
+				if(attenance >= 200) {rate = 400; }
+				if(attenance >= 250) {rate = 500; }
+			// }
+			// else {
+			// 	rate = 0;
+			// }
 			return rate;
 		}
 
@@ -160,7 +160,7 @@
 		}
 
 		var soundRate = getSoundRate(attenanceInput);
-		var lightingRate = getLightingRate(attenanceInput);
+		// var lightingRate = getLightingRate(attenanceInput);
 		var partyRate = getPartyRate();
 		var djRate = getDJrate(partyRate);
 
@@ -168,7 +168,7 @@
 
 		var hours = hoursInput;
 
-		var totalRate = Math.floor((djRate * hours) + (soundRate + lightingRate));
+		var totalRate = Math.floor((djRate * hours) + (soundRate));
 
 
 		// console.log(totalRate);
@@ -177,7 +177,7 @@
 			document.getElementById('theRate').innerHTML = totalRate;
 			document.getElementById('hourly').innerHTML = Math.floor(djRate);
 			document.getElementById('sound').innerHTML = Math.floor(soundRate);
-			document.getElementById('lighting').innerHTML = Math.floor(lightingRate);
+			// document.getElementById('lighting').innerHTML = Math.floor(lightingRate);
 
 			// document.getElementById('t<div></div>heRange').innerHTML = '&darr; ' + lowRate  + '  &nbsp; &nbsp; &nbsp;  ' + '&uarr; ' + highRate;
 		}
